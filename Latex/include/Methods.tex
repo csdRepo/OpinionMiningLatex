@@ -1,4 +1,304 @@
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  showstringspaces=flase,
+  commentstyle=\color{gray}\upshape
+}
+
+\lstdefinelanguage{XML}
+{
+  morestring=[b]",
+  morestring=[s]{>}{<},
+  morecomment=[s]{<?}{?>},
+  stringstyle=\color{black},
+  identifierstyle=\color{darkblue},
+  keywordstyle=\color{cyan},
+  morekeywords={xmlns,version,type}% list your attributes here
+}
+
+
 % CREATED BY DAVID FRISK, 2015
 \chapter{Methods}
-In this chapter we will thoroughly analyse the methods of this Thesis which are the base for the three step processing of the data. The three methods first introduced int the previous chapters.\\
+In this chapter, we will thoroughly analyse the ways with which the three processing stages which were presented in the previous units, were implemented.\\
 \\
+In order to describe in the best possible way the process that was followed, a detailed description of the dataset which was used will be given, as well as of the features that characterise it. Then, we will describe the relational database model which we used to store the information from the texts (dataset). Finally, for each one of the process stages, we will describe the methodology with which each matter was approached.
+
+\section{Preparing the Dataset}\label{31_ref}
+In this part of the methodology, the features of the used dataset (\ref{311_ref}) will be described in detail. Some information on the way of choosing data (\ref{312_ref}) will be described as well. Next, the way of data mining from the Greek Open Government platform\footnote{\url{http://www.opengov.gr}} (\ref{313_ref}) and finally, the Entity-Relation Model (\ref{314_ref}) of the database which was used to store the data will also be described.
+
+\subsection{Dataset} \label{311_ref}
+As it has already been mentioned in some points of this Thesis, the data that were used have been taken from the Greek Open Government platform, which constitutes a platform of electronic consultation of citizens on texts, more specifically on laws and decrees that the Greek Government issues. These data are open and accessible to everyone.\\
+\\
+In this section, the basic features of the studied texts will be described. The reason why this section comes first in this part of the methodology, is that the very nature of these texts (they are basically users' comments to the online service), created many problems in their analysis.\\
+\\
+As it has already been mentioned, the texts that were studied feature several oddities, some of which made the process of analysing them difficult.\\
+
+\begin{itemize}
+  \item Initially, the first that we can notice is that the length of the texts is 	relatively short. To be precise, it is rare for them to be longer than 3000 characters (approximately 200 words, 80\% of the texts). The length of the text did not affect all the stages of the analysis. The biggest difficulty appeared in the effort to extract the degree of the writer's agreement with the initial text (more details will be given later).\\
+  
+  \item A second remark is the fact that the texts that were studied do not consist an official text. By the term ``official'', we want first to declare that the texts are made up of users' comments in an online service and secondly, that they contain many errors (spelling etc). This created many difficulties in the studying of these comments. The first difficulty had to do with the tools needed in order to conduct the overall analysis of each text. The basic idea was that the tools had to be tolerant when it came to errors, at least up to a degree.\\
+\\
+Some very usual errors are:
+
+  	\begin{enumerate}
+  	\item spelling errors
+  	\item absence of some letters in a word
+  	\item letter transposition in a word
+  	\item use only of capital letters
+  	\item absence of punctuation
+  	\item wrong sentence separation (there was no gap after the dot)
+  	\item some more errors that will not be mentioned for ease of reference\\
+	\end{enumerate}
+
+  \item One more issue is  that there are many times when syntactic structure errors are 	spotted. This problem is directly connected to the use of POS Tagger for the syntactic analysis (parsing) of texts. This issue affects, to some degree, the extrapolation of arguments and of proposals and counter proposals that the user makes.\\
+  
+  \item Another feature is that the texts are entirely in Greek. This problem is more 	serious, because there are no tools which we needed at some point of the analysis, that support the Greek Language. Subsequently, as we will see later on, there was the need to resort to some compromising solutions.\\
+  
+  \item One last issue that is worth mentioning, which constitutes a more qualitative feature, at least in the whole of texts that were studied, is the fact that the majority of users who wrote a comment are ``annoyed''. This ``annoyance'' stems from the fact that the texts that are under discussion contain laws and presidential decrees that, essentially, lead to a decrease in public spending towards the citizens. This ``annoyance'' is noted almost in the entire dataset that we studied. The problem is that the texts in which the writers agree with the initial text are limited. As a result, this issue complicates the process of acknowledging, if the writer agrees with the initial text.
+\end{itemize}
+
+
+\subsection{Choosing Set of Documents}\label{312_ref}
+TODO\\
+\\
+\subsection{Finalizing the Dataset}\label{313_ref}
+TODO\\
+\\
+\subsection{Database}\label{314_ref}
+TODO\\
+\\
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.15\linewidth]{figure/ER.pdf}
+\caption{Entity - Relation Model}
+\end{figure}
+
+TODO\\
+\\
+
+\subsection{Building a Trainset}\label{315_ref}
+TODO\\
+\\
+
+
+\section{Argument Extraction}\label{32_ref}
+TODO\\
+\\
+\subsection{Selecting Argument Markers}\label{321_ref}
+TODO\\
+\\
+\subsection{POS Tagging}\label{322_ref}
+TODO\\
+\\
+\subsubsection{POS Tagger}\label{3221_ref}
+TODO\\
+\\
+\subsubsection{POS Tagger Output}\label{3222_ref}
+TODO\\
+\\
+
+
+
+\lstset{language=XML,
+  morekeywords={id,word,lemma,tag}
+}
+\begin{lstlisting}[frame=single, basicstyle=\small]
+<?xml version='1.0' encoding='UTF-8'?>
+<cesDoc xmlns="http://www.xces.org/schema/2003" version="0.4">
+  <text>
+    <body>
+      <p id="p1">
+        <s id="s1">
+          <t id="t1" word="..." tag="AtDfNeSgNm" lemma="..."/>
+          <t id="t2" word="..." tag="RgFwOr" lemma="..."/>
+          <t id="t3" word="..." tag="PnReNe03SgNmXx" lemma="..."/>
+          <t id="t4" word="..." tag="VbMnIdPr03SgXxIpPvXx" lemma="..."/>
+          <t id="t5" word="..." tag="VbMnIdPr03SgXxIpPvXx" lemma="..."/>
+          <t id="t6" word="..." tag="AsPpSp" lemma="..."/>
+          <t id="t7" word="..." tag="NoCmFeSgAc" lemma="..."/>
+          <t id="t8" word="..." tag="RgFwOr" lemma="..."/>
+          <t id="t9" word="..." tag="PTERM_P" lemma="..."/>
+        </s>
+      </p>
+    </body>
+  </text>
+</cesDoc>
+\end{lstlisting}
+
+TODO\\
+\\
+
+\subsubsection{Parsing XML File}\label{3223_ref}
+TODO\\
+\\
+\subsubsection{Uploading to Database}\label{3224_ref}
+TODO\\
+\\
+\lstset{language=SQL}
+\begin{lstlisting}[frame=single, basicstyle=\small]
+INSERT INTO opngv_argument VALUES (values..)
+\end{lstlisting}
+
+\subsection{Apply Machine Learning}\label{323_ref}
+TODO\\
+\\
+\subsubsection{Selecting Train and Test Set}\label{3231_ref}
+TODO\\
+\\
+\lstset{language=SQL}
+\begin{lstlisting}[frame=single, basicstyle=\small]
+SELECT
+	opngv_argument.verbs,
+	opngv_argument.pv_verbs,
+	opngv_argument.cue_words,
+	opngv_argument.connective_words,
+	opngv_argument.total_words,
+	opngv_argument.word_mean_length,
+	opngv_argument.adjective,
+	opngv_argument.adverbs,
+	opngv_argument.noons,
+	opngv_argument.question,
+	opngv_trainset.Argument
+FROM
+	opngv_sentence
+	INNER JOIN opngv_argument
+		ON opngv_sentence.comment_id = opngv_argument.comment_id
+	 	AND opngv_sentence.sentence_id = opngv_argument.sentence_id
+	INNER JOIN opngv_trainset
+	 	ON opngv_sentence.comment_id = opngv_trainset.comment_id
+	 	AND opngv_sentence.sentence_id = opngv_trainset.sentence_id
+
+\end{lstlisting}
+TODO\\
+\\
+
+\subsubsection{Machine Learning Process}\label{3232_ref}
+TODO\\
+\\
+\subsubsection{Machine Learning Algorithms}\label{3233_ref}
+TODO\\
+\\
+
+\textit{“Weka is a collection of machine learning algorithms for data mining tasks. The algorithms can either be applied directly to a dataset or called from your own Java code. Weka contains tools for data pre-processing, classification, regression, clustering, association rules, and visualization. It is also well-suited for developing new machine learning schemes.”}
+
+\section{Suggestion Extraction}\label{33_ref}
+TODO\\
+\\
+\subsection{Selecting Suggestion Markers}\label{331_ref}
+TODO\\
+\\
+
+\lstset{language=XML,
+  morekeywords={id,word,lemma,tag}
+}
+\begin{lstlisting}[frame=single, basicstyle=\small]
+<?xml version='1.0' encoding='UTF-8'?>
+<cesDoc xmlns="http://www.xces.org/schema/2003" version="0.4">
+  <text>
+    <body>
+      <p id="p1">
+        <s id="s1" casing="lowercase">
+          <t id="t1" word="..." tag="VbIsIdPr03SgXxIpAvXx" lemma="..."/>
+          <t id="t2" word="..." tag="PtSj" lemma="..."/>
+          <t id="t3" word="..." tag="VbMnIdXx03SgXxPePvXx" lemma="..."/>
+          <t id="t4" word="..." tag="NoCmFeSgNm" lemma="..."/>
+          <t id="t5" word="..." tag="AsPpPaFeSgAc" lemma="..."/>
+          <t id="t6" word="..." tag="NoCmFeSgAc" lemma="..."/>
+          <t id="t7" word="..." tag="DIG" lemma="..."/>
+          <t id="t8" word="..." tag="AtDfMaSgGe" lemma="..."/>
+          <t id="t9" word="..." tag="NoCmMaSgGe" lemma="..."/>
+          <t id="t10" word="..." tag="PTERM_P" lemma="..."/>
+        </s>
+      </p>
+    </body>
+  </text>
+</cesDoc>
+\end{lstlisting}
+
+TODO\\
+\\
+
+\subsection{POS Tagging and Lemmatization the set of Documents}\label{332_ref}
+TODO\\
+\\
+\subsection{Apply Information Retrieval Methods in order to find the Suggestions}\label{333_ref}
+TODO\\
+\\
+\subsection{Adding additional features for the optimization of Machine Learning Processs}\label{334_ref}
+TODO\\
+\\
+\subsection{Apply Machine Learning}\label{335_ref}
+TODO\\
+\\
+\subsubsection{Selecting Train and Test Set}\label{3351_ref}
+TODO\\
+\\
+\lstset{language=SQL}
+\begin{lstlisting}[frame=single, basicstyle=\small]
+SELECT
+	opngv_suggestion.weight,
+	opngv_suggestion.category,
+	opngv_suggestion.total_words,
+	opngv_trainset.Suggestion
+FROM
+	opngv_sentence
+	INNER JOIN opngv_suggestion
+		ON opngv_sentence.comment_id = opngv_suggestion.comment_id
+		AND opngv_sentence.sentence_id = opngv_suggestion.sentence_id
+	INNER JOIN opngv_trainset
+		ON opngv_sentence.comment_id = opngv_trainset.comment_id
+		AND opngv_sentence.sentence_id = opngv_trainset.sentence_id
+ORDER BY
+	opngv_trainset.Suggestion DESC
+LIMIT 366
+\end{lstlisting}
+TODO\\
+\\
+
+\subsubsection{Machine Learning Process}\label{3352_ref}
+TODO\\
+\\
+\subsubsection{Machine Learning Algorithms}\label{3353_ref}
+TODO\\
+\\
+\section{Overall Opinion Extraction}\label{34_ref}
+TODO\\
+\\
+\subsection{Translate Documents to English}\label{341_ref}
+TODO\\
+\\
+\subsection{Perform Sentiment Analysis}\label{342_ref}
+TODO\\
+\\
+\begin{itemize}
+	\item
+	 \textbf{SentiStrength\footnote{\url{http://sentistrength.wlv.ac.uk}}:}
+	 \textit{“SentiStrength estimates the strength of positive and negative sentiment in short texts, even for informal language. It has human-level accuracy for short social web texts in English, except political texts. SentiStrength reports two sentiment strengths:}\\
+
+	\begin{itemize}
+		\item \textit{-1 (not negative) to -5 (extremely negative)}
+		\item \textit{1 (not positive) to 5 (extremely positive)}\\
+	\end{itemize}
+
+
+\textit{Why does it use two scores? Because research from psychology has revealed that we process positive and negative sentiment in parallel - hence mixed emotions.
+SentiStrength can also report binary (positive/negative), trinary (positive/negative/neutral) and single scale (-4 to +4) results.”}\\
+
+	\item
+	\textbf{Sentiment Analysis with Python NLTK Text Classification\footnote{\url{http://text-processing.com/docs/sentiment.html}}:} 
+	\textit{“Sentiment analysis using a NLTK 2.0.4 powered text classification process. It can tell you whether it thinks the text you enter below expresses positive sentiment, negative sentiment, or if it's neutral. Using hierarchical classification, neutrality is determined first, and sentiment polarity is determined second, but only if the text is not neutral.”}
+\end{itemize}
+
+
+
+
+
+
+
+
+

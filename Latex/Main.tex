@@ -4,6 +4,9 @@
 \documentclass[12pt,a4paper,twoside,openright]{report}
 \input{include/settings/Settings}
 \usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{url}
+
 
 \begin{document} 
 
@@ -14,6 +17,10 @@
 % ABSTRACT
 \newpage
 \input{include/frontmatter/Abstract}
+
+% DECLARATION OF AUTHORSHIP
+\newpage
+\input{include/frontmatter/DeclarationOfAuthorship}
 
 % ACKNOWLEDGEMENTS
 \newpage
@@ -48,13 +55,16 @@
 \input{include/Introduction}
 
 % THEORY
-\input{include/Theory}
+\input{include/Background}
 
 % METHODS
 \input{include/Methods}
 
 % RESULTS
 \input{include/Results}
+
+% DEMO APPLICATION
+\input{include/DemoApplication}
 
 % CONCLUSION
 \input{include/Conclusion}
