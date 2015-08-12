@@ -1,90 +1,757 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="198mm" height="107mm" viewBox="0 0 19800 10700" version="1.1" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" stroke-width="28.222" stroke-linejoin="round" xml:space="preserve">
- <path fill="rgb(255,255,255)" stroke="none" d="M 9885,10704 L 0,10704 0,0 19769,0 19769,10704 9885,10704 Z"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 9464,8862 L 2213,8862 2213,1569 16714,1569 16714,8862 9464,8862 Z"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 16714,8861 L 2213,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 16714,7645 L 2213,7645"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 16714,6429 L 2213,6429"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 16714,5215 L 2213,5215"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 16714,3999 L 2213,3999"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 16714,2783 L 2213,2783"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 16714,1567 L 2213,1567"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 2213,9011 L 2213,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 2213,9011 L 2213,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 3531,9011 L 3531,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 3531,9011 L 3531,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 4849,9011 L 4849,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 4849,9011 L 4849,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 6168,9011 L 6168,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 6168,9011 L 6168,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 7486,9011 L 7486,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 7486,9011 L 7486,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 8804,9011 L 8804,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 8804,9011 L 8804,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 10122,9011 L 10122,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 10122,9011 L 10122,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 11440,9011 L 11440,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 11440,9011 L 11440,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 12758,9011 L 12758,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 12758,9011 L 12758,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 14077,9011 L 14077,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 14077,9011 L 14077,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 15395,9011 L 15395,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 15395,9011 L 15395,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 16714,9011 L 16714,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 16714,9011 L 16714,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 2213,8861 L 16714,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 2063,8861 L 2213,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 2063,8861 L 2213,8861"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 2063,7645 L 2213,7645"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 2063,7645 L 2213,7645"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 2063,6429 L 2213,6429"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 2063,6429 L 2213,6429"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 2063,5215 L 2213,5215"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 2063,5215 L 2213,5215"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 2063,3999 L 2213,3999"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 2063,3999 L 2213,3999"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 2063,2783 L 2213,2783"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 2063,2783 L 2213,2783"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 2063,1567 L 2213,1567"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 2063,1567 L 2213,1567"/>
- <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 2213,8861 L 2213,1567"/>
- <path fill="rgb(0,69,134)" stroke="none" d="M 9134,8861 L 9793,8861 9793,8788 9134,8788 9134,8861 Z"/>
- <path fill="rgb(0,69,134)" stroke="none" d="M 7816,8861 L 8475,8861 8475,8824 7816,8824 7816,8861 Z"/>
- <path fill="rgb(0,69,134)" stroke="none" d="M 5179,8861 L 5838,8861 5838,8253 5179,8253 5179,8861 Z"/>
- <path fill="rgb(0,69,134)" stroke="none" d="M 3860,8861 L 4520,8861 4520,7523 3860,7523 3860,8861 Z"/>
- <path fill="rgb(0,69,134)" stroke="none" d="M 2542,8861 L 3201,8861 3201,4607 2542,4607 2542,8861 Z"/>
- <path fill="rgb(255,66,14)" stroke="none" d="M 15725,8861 L 16384,8861 16384,8824 15725,8824 15725,8861 Z"/>
- <path fill="rgb(255,66,14)" stroke="none" d="M 10451,8861 L 11110,8861 11110,8824 10451,8824 10451,8861 Z"/>
- <path fill="rgb(255,66,14)" stroke="none" d="M 9134,8788 L 9793,8788 9793,8423 9134,8423 9134,8788 Z"/>
- <path fill="rgb(255,66,14)" stroke="none" d="M 7816,8824 L 8475,8824 8475,8168 7816,8168 7816,8824 Z"/>
- <path fill="rgb(255,66,14)" stroke="none" d="M 5179,8253 L 5838,8253 5838,6855 5179,6855 5179,8253 Z"/>
- <path fill="rgb(255,66,14)" stroke="none" d="M 3860,7523 L 4520,7523 4520,5505 3860,5505 3860,7523 Z"/>
- <path fill="rgb(255,66,14)" stroke="none" d="M 2542,4607 L 3201,4607 3201,2455 2542,2455 2542,4607 Z"/>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="2779" y="9429"/><tspan class="TextPosition" x="2779" y="9429"><tspan fill="rgb(0,0,0)" stroke="none">1</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="4097" y="9429"/><tspan class="TextPosition" x="4097" y="9429"><tspan fill="rgb(0,0,0)" stroke="none">2</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="5415" y="9429"/><tspan class="TextPosition" x="5415" y="9429"><tspan fill="rgb(0,0,0)" stroke="none">3</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="6734" y="9429"/><tspan class="TextPosition" x="6734" y="9429"><tspan fill="rgb(0,0,0)" stroke="none">4</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="8052" y="9429"/><tspan class="TextPosition" x="8052" y="9429"><tspan fill="rgb(0,0,0)" stroke="none">5</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="9371" y="9429"/><tspan class="TextPosition" x="9371" y="9429"><tspan fill="rgb(0,0,0)" stroke="none">6</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="10689" y="9429"/><tspan class="TextPosition" x="10689" y="9429"><tspan fill="rgb(0,0,0)" stroke="none">7</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="12007" y="9429"/><tspan class="TextPosition" x="12007" y="9429"><tspan fill="rgb(0,0,0)" stroke="none">8</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="13326" y="9429"/><tspan class="TextPosition" x="13326" y="9429"><tspan fill="rgb(0,0,0)" stroke="none">9</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="14552" y="9429"/><tspan class="TextPosition" x="14552" y="9429"><tspan fill="rgb(0,0,0)" stroke="none">10</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="15870" y="9429"/><tspan class="TextPosition" x="15870" y="9429"><tspan fill="rgb(0,0,0)" stroke="none">11</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="1778" y="8982"/><tspan class="TextPosition" x="1778" y="8982"><tspan fill="rgb(0,0,0)" stroke="none">0</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="1407" y="7766"/><tspan class="TextPosition" x="1407" y="7766"><tspan fill="rgb(0,0,0)" stroke="none">100</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="1407" y="6550"/><tspan class="TextPosition" x="1407" y="6550"><tspan fill="rgb(0,0,0)" stroke="none">200</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="1407" y="5335"/><tspan class="TextPosition" x="1407" y="5335"><tspan fill="rgb(0,0,0)" stroke="none">300</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="1407" y="4119"/><tspan class="TextPosition" x="1407" y="4119"><tspan fill="rgb(0,0,0)" stroke="none">400</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="1407" y="2903"/><tspan class="TextPosition" x="1407" y="2903"><tspan fill="rgb(0,0,0)" stroke="none">500</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="1407" y="1687"/><tspan class="TextPosition" x="1407" y="1687"><tspan fill="rgb(0,0,0)" stroke="none">600</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="459px" font-weight="400"><tspan class="TextPosition" x="7689" y="911"/><tspan class="TextPosition" x="7689" y="911"><tspan fill="rgb(0,0,0)" stroke="none">Number of Cue Words</tspan></tspan></tspan></text>
- <path fill="rgb(0,69,134)" stroke="none" d="M 17331,5705 L 17225,5705 17225,5494 17436,5494 17436,5705 17331,5705 Z"/>
- <path fill="rgb(255,66,14)" stroke="none" d="M 17331,5208 L 17225,5208 17225,4997 17436,4997 17436,5208 17331,5208 Z"/>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="17536" y="5222"/><tspan class="TextPosition" x="17536" y="5222"><tspan fill="rgb(0,0,0)" stroke="none">Class “YES”</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="353px" font-weight="400"><tspan class="TextPosition" x="17536" y="5719"/><tspan class="TextPosition" x="17536" y="5719"><tspan fill="rgb(0,0,0)" stroke="none">Class “NO”</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="318px" font-weight="400"><tspan class="TextPosition" x="6692" y="10110"/><tspan class="TextPosition" x="6692" y="10110"><tspan fill="rgb(0,0,0)" stroke="none">No. of Cue Wordss in a Sentence</tspan></tspan></tspan></text>
- <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans" font-size="318px" font-weight="400"><tspan class="TextPosition" x="837" y="6669" transform="translate(837,6669) rotate(-90) translate(-837,-6669)"/><tspan class="TextPosition" x="837" y="6669" transform="translate(837,6669) rotate(-90) translate(-837,-6669)"><tspan fill="rgb(0,0,0)" stroke="none">No. of Sentences</tspan></tspan></tspan></text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg2"
+   xml:space="preserve"
+   stroke-linejoin="round"
+   stroke-width="28.222"
+   version="1.1"
+   viewBox="0 0 19800 10700"
+   height="107mm"
+   width="198mm"><metadata
+     id="metadata364"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+     id="defs362" /><path
+     id="path4"
+     d="M 9885,10704 L 0,10704 0,0 19769,0 19769,10704 9885,10704 Z"
+     stroke="none"
+     fill="rgb(255,255,255)" /><path
+     id="path6"
+     d="M 9464,8862 L 2213,8862 2213,1569 16714,1569 16714,8862 9464,8862 Z"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path8"
+     d="M 16714,8861 L 2213,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path10"
+     d="M 16714,7645 L 2213,7645"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path12"
+     d="M 16714,6429 L 2213,6429"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path14"
+     d="M 16714,5215 L 2213,5215"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path16"
+     d="M 16714,3999 L 2213,3999"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path18"
+     d="M 16714,2783 L 2213,2783"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path20"
+     d="M 16714,1567 L 2213,1567"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path22"
+     d="M 2213,9011 L 2213,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path24"
+     d="M 2213,9011 L 2213,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path26"
+     d="M 3531,9011 L 3531,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path28"
+     d="M 3531,9011 L 3531,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path30"
+     d="M 4849,9011 L 4849,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path32"
+     d="M 4849,9011 L 4849,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path34"
+     d="M 6168,9011 L 6168,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path36"
+     d="M 6168,9011 L 6168,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path38"
+     d="M 7486,9011 L 7486,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path40"
+     d="M 7486,9011 L 7486,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path42"
+     d="M 8804,9011 L 8804,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path44"
+     d="M 8804,9011 L 8804,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path46"
+     d="M 10122,9011 L 10122,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path48"
+     d="M 10122,9011 L 10122,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path50"
+     d="M 11440,9011 L 11440,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path52"
+     d="M 11440,9011 L 11440,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path54"
+     d="M 12758,9011 L 12758,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path56"
+     d="M 12758,9011 L 12758,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path58"
+     d="M 14077,9011 L 14077,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path60"
+     d="M 14077,9011 L 14077,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path62"
+     d="M 15395,9011 L 15395,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path64"
+     d="M 15395,9011 L 15395,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path66"
+     d="M 16714,9011 L 16714,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path68"
+     d="M 16714,9011 L 16714,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path70"
+     d="M 2213,8861 L 16714,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path72"
+     d="M 2063,8861 L 2213,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path74"
+     d="M 2063,8861 L 2213,8861"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path76"
+     d="M 2063,7645 L 2213,7645"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path78"
+     d="M 2063,7645 L 2213,7645"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path80"
+     d="M 2063,6429 L 2213,6429"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path82"
+     d="M 2063,6429 L 2213,6429"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path84"
+     d="M 2063,5215 L 2213,5215"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path86"
+     d="M 2063,5215 L 2213,5215"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path88"
+     d="M 2063,3999 L 2213,3999"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path90"
+     d="M 2063,3999 L 2213,3999"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path92"
+     d="M 2063,2783 L 2213,2783"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path94"
+     d="M 2063,2783 L 2213,2783"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path96"
+     d="M 2063,1567 L 2213,1567"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path98"
+     d="M 2063,1567 L 2213,1567"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path100"
+     d="M 2213,8861 L 2213,1567"
+     stroke-linejoin="round"
+     stroke="rgb(179,179,179)"
+     fill="none" /><path
+     id="path102"
+     d="M 9134,8861 L 9793,8861 9793,8788 9134,8788 9134,8861 Z"
+     stroke="none"
+     fill="rgb(0,69,134)" /><path
+     id="path104"
+     d="M 7816,8861 L 8475,8861 8475,8824 7816,8824 7816,8861 Z"
+     stroke="none"
+     fill="rgb(0,69,134)" /><path
+     id="path106"
+     d="M 5179,8861 L 5838,8861 5838,8253 5179,8253 5179,8861 Z"
+     stroke="none"
+     fill="rgb(0,69,134)" /><path
+     id="path108"
+     d="M 3860,8861 L 4520,8861 4520,7523 3860,7523 3860,8861 Z"
+     stroke="none"
+     fill="rgb(0,69,134)" /><path
+     id="path110"
+     d="M 2542,8861 L 3201,8861 3201,4607 2542,4607 2542,8861 Z"
+     stroke="none"
+     fill="rgb(0,69,134)" /><path
+     id="path112"
+     d="M 15725,8861 L 16384,8861 16384,8824 15725,8824 15725,8861 Z"
+     stroke="none"
+     fill="rgb(255,66,14)" /><path
+     id="path114"
+     d="M 10451,8861 L 11110,8861 11110,8824 10451,8824 10451,8861 Z"
+     stroke="none"
+     fill="rgb(255,66,14)" /><path
+     id="path116"
+     d="M 9134,8788 L 9793,8788 9793,8423 9134,8423 9134,8788 Z"
+     stroke="none"
+     fill="rgb(255,66,14)" /><path
+     id="path118"
+     d="M 7816,8824 L 8475,8824 8475,8168 7816,8168 7816,8824 Z"
+     stroke="none"
+     fill="rgb(255,66,14)" /><path
+     id="path120"
+     d="M 5179,8253 L 5838,8253 5838,6855 5179,6855 5179,8253 Z"
+     stroke="none"
+     fill="rgb(255,66,14)" /><path
+     id="path122"
+     d="M 3860,7523 L 4520,7523 4520,5505 3860,5505 3860,7523 Z"
+     stroke="none"
+     fill="rgb(255,66,14)" /><path
+     id="path124"
+     d="M 2542,4607 L 3201,4607 3201,2455 2542,2455 2542,4607 Z"
+     stroke="none"
+     fill="rgb(255,66,14)" /><text
+     id="text126"
+     class="TextShape"><tspan
+       id="tspan128"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan130"
+         y="9429"
+         x="2779"
+         class="TextPosition" /><tspan
+         id="tspan132"
+         y="9429"
+         x="2779"
+         class="TextPosition"><tspan
+           id="tspan134"
+           stroke="none"
+           fill="rgb(0,0,0)">1</tspan></tspan></tspan></text>
+<text
+     id="text136"
+     class="TextShape"><tspan
+       id="tspan138"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan140"
+         y="9429"
+         x="4097"
+         class="TextPosition" /><tspan
+         id="tspan142"
+         y="9429"
+         x="4097"
+         class="TextPosition"><tspan
+           id="tspan144"
+           stroke="none"
+           fill="rgb(0,0,0)">2</tspan></tspan></tspan></text>
+<text
+     id="text146"
+     class="TextShape"><tspan
+       id="tspan148"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan150"
+         y="9429"
+         x="5415"
+         class="TextPosition" /><tspan
+         id="tspan152"
+         y="9429"
+         x="5415"
+         class="TextPosition"><tspan
+           id="tspan154"
+           stroke="none"
+           fill="rgb(0,0,0)">3</tspan></tspan></tspan></text>
+<text
+     id="text156"
+     class="TextShape"><tspan
+       id="tspan158"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan160"
+         y="9429"
+         x="6734"
+         class="TextPosition" /><tspan
+         id="tspan162"
+         y="9429"
+         x="6734"
+         class="TextPosition"><tspan
+           id="tspan164"
+           stroke="none"
+           fill="rgb(0,0,0)">4</tspan></tspan></tspan></text>
+<text
+     id="text166"
+     class="TextShape"><tspan
+       id="tspan168"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan170"
+         y="9429"
+         x="8052"
+         class="TextPosition" /><tspan
+         id="tspan172"
+         y="9429"
+         x="8052"
+         class="TextPosition"><tspan
+           id="tspan174"
+           stroke="none"
+           fill="rgb(0,0,0)">5</tspan></tspan></tspan></text>
+<text
+     id="text176"
+     class="TextShape"><tspan
+       id="tspan178"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan180"
+         y="9429"
+         x="9371"
+         class="TextPosition" /><tspan
+         id="tspan182"
+         y="9429"
+         x="9371"
+         class="TextPosition"><tspan
+           id="tspan184"
+           stroke="none"
+           fill="rgb(0,0,0)">6</tspan></tspan></tspan></text>
+<text
+     id="text186"
+     class="TextShape"><tspan
+       id="tspan188"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan190"
+         y="9429"
+         x="10689"
+         class="TextPosition" /><tspan
+         id="tspan192"
+         y="9429"
+         x="10689"
+         class="TextPosition"><tspan
+           id="tspan194"
+           stroke="none"
+           fill="rgb(0,0,0)">7</tspan></tspan></tspan></text>
+<text
+     id="text196"
+     class="TextShape"><tspan
+       id="tspan198"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan200"
+         y="9429"
+         x="12007"
+         class="TextPosition" /><tspan
+         id="tspan202"
+         y="9429"
+         x="12007"
+         class="TextPosition"><tspan
+           id="tspan204"
+           stroke="none"
+           fill="rgb(0,0,0)">8</tspan></tspan></tspan></text>
+<text
+     id="text206"
+     class="TextShape"><tspan
+       id="tspan208"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan210"
+         y="9429"
+         x="13326"
+         class="TextPosition" /><tspan
+         id="tspan212"
+         y="9429"
+         x="13326"
+         class="TextPosition"><tspan
+           id="tspan214"
+           stroke="none"
+           fill="rgb(0,0,0)">9</tspan></tspan></tspan></text>
+<text
+     id="text216"
+     class="TextShape"><tspan
+       id="tspan218"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan220"
+         y="9429"
+         x="14552"
+         class="TextPosition" /><tspan
+         id="tspan222"
+         y="9429"
+         x="14552"
+         class="TextPosition"><tspan
+           id="tspan224"
+           stroke="none"
+           fill="rgb(0,0,0)">10</tspan></tspan></tspan></text>
+<text
+     id="text226"
+     class="TextShape"><tspan
+       id="tspan228"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan230"
+         y="9429"
+         x="15870"
+         class="TextPosition" /><tspan
+         id="tspan232"
+         y="9429"
+         x="15870"
+         class="TextPosition"><tspan
+           id="tspan234"
+           stroke="none"
+           fill="rgb(0,0,0)">11</tspan></tspan></tspan></text>
+<text
+     id="text236"
+     class="TextShape"><tspan
+       id="tspan238"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan240"
+         y="8982"
+         x="1778"
+         class="TextPosition" /><tspan
+         id="tspan242"
+         y="8982"
+         x="1778"
+         class="TextPosition"><tspan
+           id="tspan244"
+           stroke="none"
+           fill="rgb(0,0,0)">0</tspan></tspan></tspan></text>
+<text
+     id="text246"
+     class="TextShape"><tspan
+       id="tspan248"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan250"
+         y="7766"
+         x="1407"
+         class="TextPosition" /><tspan
+         id="tspan252"
+         y="7766"
+         x="1407"
+         class="TextPosition"><tspan
+           id="tspan254"
+           stroke="none"
+           fill="rgb(0,0,0)">100</tspan></tspan></tspan></text>
+<text
+     id="text256"
+     class="TextShape"><tspan
+       id="tspan258"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan260"
+         y="6550"
+         x="1407"
+         class="TextPosition" /><tspan
+         id="tspan262"
+         y="6550"
+         x="1407"
+         class="TextPosition"><tspan
+           id="tspan264"
+           stroke="none"
+           fill="rgb(0,0,0)">200</tspan></tspan></tspan></text>
+<text
+     id="text266"
+     class="TextShape"><tspan
+       id="tspan268"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan270"
+         y="5335"
+         x="1407"
+         class="TextPosition" /><tspan
+         id="tspan272"
+         y="5335"
+         x="1407"
+         class="TextPosition"><tspan
+           id="tspan274"
+           stroke="none"
+           fill="rgb(0,0,0)">300</tspan></tspan></tspan></text>
+<text
+     id="text276"
+     class="TextShape"><tspan
+       id="tspan278"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan280"
+         y="4119"
+         x="1407"
+         class="TextPosition" /><tspan
+         id="tspan282"
+         y="4119"
+         x="1407"
+         class="TextPosition"><tspan
+           id="tspan284"
+           stroke="none"
+           fill="rgb(0,0,0)">400</tspan></tspan></tspan></text>
+<text
+     id="text286"
+     class="TextShape"><tspan
+       id="tspan288"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan290"
+         y="2903"
+         x="1407"
+         class="TextPosition" /><tspan
+         id="tspan292"
+         y="2903"
+         x="1407"
+         class="TextPosition"><tspan
+           id="tspan294"
+           stroke="none"
+           fill="rgb(0,0,0)">500</tspan></tspan></tspan></text>
+<text
+     id="text296"
+     class="TextShape"><tspan
+       id="tspan298"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan300"
+         y="1687"
+         x="1407"
+         class="TextPosition" /><tspan
+         id="tspan302"
+         y="1687"
+         x="1407"
+         class="TextPosition"><tspan
+           id="tspan304"
+           stroke="none"
+           fill="rgb(0,0,0)">600</tspan></tspan></tspan></text>
+<text
+     id="text306"
+     class="TextShape"><tspan
+       id="tspan308"
+       font-weight="400"
+       font-size="459px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan310"
+         y="911"
+         x="7689"
+         class="TextPosition" /><tspan
+         id="tspan312"
+         y="911"
+         x="7689"
+         class="TextPosition"><tspan
+           id="tspan314"
+           stroke="none"
+           fill="rgb(0,0,0)">Number of Cue Words</tspan></tspan></tspan></text>
+<path
+     id="path316"
+     d="M 17331,5705 L 17225,5705 17225,5494 17436,5494 17436,5705 17331,5705 Z"
+     stroke="none"
+     fill="rgb(0,69,134)" /><path
+     id="path318"
+     d="M 17331,5208 L 17225,5208 17225,4997 17436,4997 17436,5208 17331,5208 Z"
+     stroke="none"
+     fill="rgb(255,66,14)" /><text
+     id="text320"
+     class="TextShape"><tspan
+       id="tspan322"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan324"
+         y="5222"
+         x="17536"
+         class="TextPosition" /><tspan
+         id="tspan326"
+         y="5222"
+         x="17536"
+         class="TextPosition"><tspan
+           id="tspan328"
+           stroke="none"
+           fill="rgb(0,0,0)">Class “YES”</tspan></tspan></tspan></text>
+<text
+     id="text330"
+     class="TextShape"><tspan
+       id="tspan332"
+       font-weight="400"
+       font-size="353px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan334"
+         y="5719"
+         x="17536"
+         class="TextPosition" /><tspan
+         id="tspan336"
+         y="5719"
+         x="17536"
+         class="TextPosition"><tspan
+           id="tspan338"
+           stroke="none"
+           fill="rgb(0,0,0)">Class “NO”</tspan></tspan></tspan></text>
+<text
+     id="text340"
+     class="TextShape"><tspan
+       style="font-weight:400;font-size:318px;font-family:'Liberation Sans'"
+       id="tspan342"
+       font-weight="400"
+       font-size="318px"
+       class="TextParagraph"><tspan
+         id="tspan344"
+         y="10110"
+         x="6692"
+         class="TextPosition" /><tspan
+         id="tspan346"
+         y="10110"
+         x="6692"
+         class="TextPosition"><tspan
+           style="fill:#000000;stroke:none"
+           id="tspan348">No. of Cue Words in a Sentence</tspan></tspan></tspan></text>
+<text
+     id="text350"
+     class="TextShape"><tspan
+       id="tspan352"
+       font-weight="400"
+       font-size="318px"
+       font-family="Liberation Sans"
+       class="TextParagraph"><tspan
+         id="tspan354"
+         transform="translate(837,6669) rotate(-90) translate(-837,-6669)"
+         y="6669"
+         x="837"
+         class="TextPosition" /><tspan
+         id="tspan356"
+         transform="translate(837,6669) rotate(-90) translate(-837,-6669)"
+         y="6669"
+         x="837"
+         class="TextPosition"><tspan
+           id="tspan358"
+           stroke="none"
+           fill="rgb(0,0,0)">No. of Sentences</tspan></tspan></tspan></text>
 </svg>
