@@ -54,7 +54,7 @@ Some very usual errors are:
   	\item some more errors that will not be mentioned for ease of reference\\
 	\end{enumerate}
 
-  \item One more issue is  that there are many times when syntactic structure errors are 	spotted. This problem is directly connected to the use of POS Tagger for the syntactic analysis (parsing) of texts. This issue affects, to some degree, the extrapolation of arguments and of proposals and counter proposals that the user makes.\\
+  \item One more issue is  that there are many times when syntactic structure errors are 	spotted. This problem is directly connected to the use of POS-Tagger for the syntactic analysis (parsing) of texts. This issue affects, to some degree, the extrapolation of arguments and of proposals and counter proposals that the user makes.\\
   
   \item Another feature is that the texts are entirely in Greek. This problem is more 	serious, because there are no tools which we needed at some point of the analysis, that support the Greek Language. Subsequently, as we will see later on, there was the need to resort to some compromising solutions.\\
   
@@ -104,18 +104,62 @@ One last element that deals with the chapter on dataset, is characterising a tot
 
 
 \section{Argument Extraction}\label{32_ref}
-TODO\\
+At this point, the process with which the Argument Extraction was carried out on the whole of the texts will be described. The process is based on three stages:\\
 \\
+\begin{itemize}
+
+	\item Selecting Argument Markers (\ref{321_ref}).
+	\item POS-Tagging the set of documents (\ref{322_ref}).
+	\item Applying machine learning  to the Argument Markers (\ref{323_ref}).\\
+
+\end{itemize}
+Each one of the three stages will be explained right away.
+
 \subsection{Selecting Argument Markers}\label{321_ref}
+This step, in essence, constitutes the selection process of certain ``criteria'' that will help us define what an argument is. Essentially, this process constituted the hardest part in the whole Argument Extraction stage. This step, by extension, was performed only once.\\
+\\
+Having studied enough from Related Work (which was mentioned to a great extent above), it was clear that in order to extract the arguments from the texts that we had available we would have to apply some Machine Learning process. Therefore, it is now clearer that at this step (\ref{321_ref}), we had to define some parameters which will define with a relative clarity whether a sentence is an argument or not.\\
+\\
+But before we get in the process of searching for these variables, we had one more difficulty to face. Even though it sounds relatively easy to recognise the arguments in a text, in reality it was a rather difficult process. There was great difficulty for the whole team that is working on this Project to agree on whether a sentence contains an argument or not. After a lot of discussion, we ended up with the following definition:\\
+\\
+\textit{Sentence is likely to contain an argument if it contains the following markers:\\}
+\begin{itemize}
+
+	\item \textit{The sentence provides a context clue from which we can interpret that the writer expresses an opinion}.
+	\item \textit{The sentence is explanatory, which means that the writer wants either to further explain or support an opinion.\\}
+	
+\end{itemize}
+
+If there is any of the above markers in a sentence, then this sentence can be characterised as an argument (Argumentative sentence). Even with the above two conventions, in some cases it is still difficult to determine whether a sentence is an argument. More precisely, another convention has been set, with which we made an effort to exclude the sentences that are interrogative. The reason is that usually, interrogative sentences are likely to express irony. In our dataset this was actually very usual.\\
+\\
+Having set the above conventions, we studied a total of Argumentative Sentences, in order to be able to track down ``Argument Markers''. In essence, we looked for parts of speech (for example the number of verbs, number of adjectives and more), as well as other variables that often appear in this type of sentences. These variables were to be used in the next steps and especially in the step where the ``Machine Learning'' process is applied\\
+\\
+From the study that was conducted, also combining Related work, we ended up with the following variables:\\
+\\
+\begin{itemize}
+
+	\item \textbf{Number of Verbs:} In many studies which have been conducted in the past, it was noted that verbs are closely linked to arguments. To be precise, verbs express action. Another characteristic is that verbs syntactically compose a sentence or, a little more arbitrarily, verbs enrich a sentence. Consequently, it was noted that the sentences which contain arguments usually have a larger number of verbs.
+	\item \textbf{missing:}	
+	\item \textbf{Key Words:} This variable refers to the number of words that were traced in a group of words that we created. This group contains words that are used when someone tries to explain or support an opinion. For example, in this group there are the words  consider, believe, admit, suppose, think, must, consequently, since, until, because, namely.
+	\item \textbf{Number of Connective Words:} This variable counts the number of linking words that were found in a sentence. In essence, this number has a direct relation to the next variable which shows the total number of words. The idea of counting the length of a sentence lies to the fact that usually, longer sentences are more likely to contain arguments. Especially when the studied dataset contains texts with arguments and political discussion.
+	\item \textbf{Total Number of Words:} respectively with the previous variable.
+	\item \textbf{Average Number of Letters in a Word:} This variable came up from the bibliography that we had available. It has been noted that this variable, especially in texts that contain political discussion, can help in a significant way to track arguments.
+	\item \textbf{Number of Adjectives:} It is the number of arguments that were found in a sentence. The logic behind this variable is the same  with  the ``Number of Verbs'' variable logic.
+	\item \textbf{Number of Adverbs:} It came up after studying the bibliography and it states the number of adverbs in a sentence.
+	\item \textbf{Number of Nouns:} The role of this variable is equivalent to the ``Number of Adjectives'' variable.
+	\item \textbf{A Boolean Variable that States Whether a Sentence is Interrogative:} The need for this variable was explained thoroughly above.
+
+\end{itemize}
+
+\subsection{POS-Tagging}\label{322_ref}
+In this part we will analyse the second step in the process of argument extraction from a text. Unlike the previous step (\ref{321_ref}), the execution of this step is essential for every new step we wish to analyse.\\
+\\
+As it has already been mentioned above (\ref{22_ref}), the POS-Tagging procedure has as goal to analyse the grammar of the text, as well as to extract an output which will contain a recognition of what part of speech each word is. Clearly, this process is very important for Argument Extraction because it constitutes the way with which all parts of speech will be detected.
+
+\subsubsection{POS-Tagger}\label{3221_ref}
 TODO\\
 \\
-\subsection{POS Tagging}\label{322_ref}
-TODO\\
-\\
-\subsubsection{POS Tagger}\label{3221_ref}
-TODO\\
-\\
-\subsubsection{POS Tagger Output}\label{3222_ref}
+\subsubsection{POS-Tagger Output}\label{3222_ref}
 TODO\\
 \\
 
@@ -240,7 +284,7 @@ TODO\\
 TODO\\
 \\
 
-\subsection{POS Tagging and Lemmatization the set of Documents}\label{332_ref}
+\subsection{POS-Tagging and Lemmatization the set of Documents}\label{332_ref}
 TODO\\
 \\
 \subsection{Apply Information Retrieval Methods in order to find the Suggestions}\label{333_ref}
