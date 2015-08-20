@@ -157,14 +157,11 @@ In this part we will analyse the second step in the process of argument extracti
 As it has already been mentioned above (\ref{22_ref}), the POS-Tagging procedure has as goal to analyse the grammar of the text, as well as to extract an output which will contain a recognition of what part of speech each word is. Clearly, this process is very important for Argument Extraction because it constitutes the way with which all parts of speech will be detected.
 
 \subsubsection{POS-Tagger}\label{3221_ref}
-TODO\\
-\\
+In this Thesis, ``ILSP POS-Tagger\footnote{\url{http://nlp.ilsp.gr/soaplab2-axis/}}'' was used, which was created by the ``Institute of Language and Speech processing\footnote{\url{http://www.ilsp.gr/en}}''.
+
 \subsubsection{POS-Tagger Output}\label{3222_ref}
-TODO\\
+From the outputs supported by POS-Tagger that we had available, we have chosen the ``xceslemma'' option, with which-apart from POS-Tagging, Lemmatization can also be accomplished. We will need the latter in the next unit that we are going to study. The output given is in XML format. An example can be seen below:\\
 \\
-
-
-
 \lstset{language=XML,
   morekeywords={id,word,lemma,tag}
 }
@@ -191,8 +188,16 @@ TODO\\
 </cesDoc>
 \end{lstlisting}
 
-TODO\\
+The text that was given as input was \textit{``The output which is given is in XML format''}. We note that for every word of the text, the following information is given:\\
 \\
+\begin{itemize}
+	
+	\item \textbf{Id:} an auto increment identifier given in every word of the text
+	\item \textbf{Word:} the initial word of the text
+	\item \textbf{Tag:} the Grammar concerning the particular word. For example, verbs start with ``Vb'' and nouns with ``No''. The whole tagset can be found here \url{http://nlp.ilsp.gr/nlp/tagset_examples/tagset_en/}
+	\item \textbf{Lemma:} it is the dictionary entry of each word. For example, we note that the verb ``given'' has ``give'' as its lemma.
+
+\end{itemize}
 
 \subsubsection{Parsing XML File}\label{3223_ref}
 TODO\\
