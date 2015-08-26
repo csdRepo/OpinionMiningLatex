@@ -90,7 +90,7 @@ These data were later stored in the database which was created for the storage o
 
 \subsection{Database}\label{314_ref}
 In order to store the database, an MySQL\footnote{\url{https://www.mysql.com}} Database was created, whose Entity-Relation Model\footnote{\url{https://en.wikipedia.org/wiki/Entity\%E2\%80\%93relationship_model}} can be presented in the following layout.
-
+\newpage
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.15\linewidth]{figure/ER.pdf}
@@ -161,7 +161,6 @@ In this Thesis, ``ILSP POS-Tagger\footnote{\url{http://nlp.ilsp.gr/soaplab2-axis
 
 \subsubsection{POS-Tagger Output}\label{3222_ref}
 From the outputs supported by POS-Tagger that we had available, we have chosen the ``xceslemma'' option, with which-apart from POS-Tagging, Lemmatization can also be accomplished. We will need the latter in the next unit that we are going to study. The output given is in XML format. An example can be seen below:\\
-\\
 \lstset{language=XML,
   morekeywords={id,word,lemma,tag}
 }
@@ -194,28 +193,27 @@ The text that was given as input was \textit{``The output which is given is in X
 	
 	\item \textbf{Id:} an auto increment identifier given in every word of the text
 	\item \textbf{Word:} the initial word of the text
-	\item \textbf{Tag:} the Grammar concerning the particular word. For example, verbs start with ``Vb'' and nouns with ``No''. The whole tagset can be found here \url{http://nlp.ilsp.gr/nlp/tagset_examples/tagset_en/}
+	\item \textbf{Tag:} the Grammar concerning the particular word. For example, verbs start with ``Vb'' and nouns with ``No''. The whole tagset can be found here:\\ \url{http://nlp.ilsp.gr/nlp/tagset_examples/tagset_en/}.
 	\item \textbf{Lemma:} it is the dictionary entry of each word. For example, we note that the verb ``given'' has ``give'' as its lemma.
 
 \end{itemize}
 
 \subsubsection{Parsing XML File}\label{3223_ref}
-TODO\\
-\\
+For the operation and data extraction from the XML file, DOM (Document Object Model\footnote{\url{http://www.w3.org/DOM/}}) was used, which is a platform for the representation and the interaction with objects in XML files. In this platform, the nodes of each file are organised in a tree form called the DOM tree. The objects in the DOM tree can be operated using the methods for objects. DOM's public interface is determined in Application Programming Interface.
+
 \subsubsection{Uploading to Database}\label{3224_ref}
-TODO\\
-\\
+Finally, the data from the Parsing of XML file (\ref{3223_ref}) are stored in the Database and more precisely in the ``opngv\textunderscore argument'' table. For storing, the following Query is used:\\
 \lstset{language=SQL}
 \begin{lstlisting}[frame=single, basicstyle=\small]
 INSERT INTO opngv_argument VALUES (values..)
 \end{lstlisting}
 
 \subsection{Apply Machine Learning}\label{323_ref}
-TODO\\
-\\
+The last stage for argument retrieval consists of the application of a Machine Learning process. In order for this process to be accomplished, a train set and a test set should have been clearly set.
+
 \subsubsection{Selecting Train and Test Set}\label{3231_ref}
-TODO\\
-\\
+In this case in point, the train set is stored in the Data Base. More precisely, the train set retrieval from the Database is done with the following query:
+\newpage
 \lstset{language=SQL}
 \begin{lstlisting}[frame=single, basicstyle=\small]
 SELECT
@@ -238,26 +236,54 @@ FROM
 	INNER JOIN opngv_trainset
 	 	ON opngv_sentence.comment_id = opngv_trainset.comment_id
 	 	AND opngv_sentence.sentence_id = opngv_trainset.sentence_id
-
 \end{lstlisting}
-TODO\\
-\\
+Whereas the test set constitutes the total of the sentences of a text, which we wish to analyse. In essence, to make it clearer, two tables, which contain the same columns, are created every time. The train set table contains the data as described in units (\ref{315_ref}) and (\ref{321_ref}). The second table (test set), contains the data that came up from the process that was described in unit (\ref{322_ref}) for new texts.
 
 \subsubsection{Machine Learning Process}\label{3232_ref}
-TODO\\
+For the application of a Machine Learning Process, the Weka Framework ``Weka 3: Data Mining Software in Java\footnote{\url{http://www.cs.waikato.ac.nz/ml/weka/}}'' was used.\\
 \\
-\subsubsection{Machine Learning Algorithms}\label{3233_ref}
-TODO\\
-\\
-
 \textit{“Weka is a collection of machine learning algorithms for data mining tasks. The algorithms can either be applied directly to a dataset or called from your own Java code. Weka contains tools for data pre-processing, classification, regression, clustering, association rules, and visualization. It is also well-suited for developing new machine learning schemes.”}
 
+\subsubsection{Machine Learning Algorithms}\label{3233_ref}
+To verify the accuracy of the Train set, we tried many algorithms:\\
+
+\begin{itemize}
+
+	\item Logistic Regression\footnote{\url{https://en.wikipedia.org/wiki/Logistic_regression}}
+	\item Native Bayes\footnote{\url{https://en.wikipedia.org/wiki/Naive_Bayes_classifier}}
+	\item Support Vector Machines\footnote{\url{https://en.wikipedia.org/wiki/Support_vector_machine}}
+	\item Random Forest\footnote{\url{https://en.wikipedia.org/wiki/Random_forest}}\\
+
+\end{itemize}
+The results will be analysed in the following units.
+
 \section{Suggestion Extraction}\label{33_ref}
-TODO\\
-\\
+At this section we will describe the the procedure that we followed in order to achieve the Suggestion Extraction. The Procedure has five steps:\\
+\begin{itemize}
+
+	\item Selecting Suggestion Markers (\ref{331_ref})
+	\item POS-Tagging \& Lemmatization the set of Documents (\ref{332_ref})
+	\item Apply Information Retrieval Methods in order to find the suggestions (\ref{333_ref}) 
+	\item Adding additional features for the optimization of\\Machine Learning Process (\ref{334_ref})
+	\item Apply Machine Learning (\ref{335_ref})\\
+
+\end{itemize}
+Each one from the above steps will be explained in detail, in the next sections.
+
 \subsection{Selecting Suggestion Markers}\label{331_ref}
-TODO\\
+As in the previous chapter we have, at this stage, to set some suggestion markers i.e., some characteristics in each sentence, which, if they appear, then the sentence that is being studied probably contains a suggestion.\\
 \\
+The basic idea that we applied is based, to a great extent, on Greek Grammar. We found that a suggestion can be ``modelled'' better than an argument. The basic concept is that in order to make a suggestion, a writer is ``obliged'' to follow some Grammar rules.\\
+\\
+We know that according to Greek Grammar, in order to express incitement in a sentence, the writer should use mainly either the Imperative or the Subjunctive Grammatical mood. These two Grammatical moods are often linked to the meaning we want to detect in our texts.\\
+\\
+Starting with the aforementioned concept, we noted that the use exclusively of Greek Grammar is not enough. In some way, we had to specify with more clarity what we were looking for in a text.\\
+\\
+\textbf{So, we extended the above concept. We combined Grammar rules with lemmas in order to achieve higher accuracy.}\\
+\\
+To make the above process clearer: Initially, using the ``ILSP POS-Tagger'' output, we noted the Grammar tags (\ref{3222_ref}), as well as the lemmas of verbs (\ref{3222_ref}) in order to create a list of verbs that are involved in cases where a sentence can be considered  as a suggestion. We can say that we noted the verbs which define the meaning of a sentence, making it a suggestion.\\
+\\
+An example can make the concept that was presented even clearer: Given the sentence \textit{``a change in paragraph 5 of the law  must be made..''} we noted that, in this example, ``must be made'' plays a determining role in order to put across the meaning of the sentence as a suggestion. This particular part of the sentence also has a particular Grammatical form.\\
 
 \lstset{language=XML,
   morekeywords={id,word,lemma,tag}
@@ -286,24 +312,53 @@ TODO\\
 </cesDoc>
 \end{lstlisting}
 
-TODO\\
-\\
+More precisely, we noticed that some tags, such as ``VbLsLdPr03SgXxLpAvXx'' and ``VbMnLdXx03SgXxPePvXx'' appear in many cases. Finally, we created a list with many cases that we detected. Some cases appear below:\\
+
+\begin{itemize}
+
+	\item We have to VbLsLdPr03SgXxpAvXx PtSj
+	\item PtSj VbMnLdXxPepvXx must be studied
+	\item VbMnLdXx03SgXxPePvXx PtSj must be applied
+	\item Add PtSj VbMnLdPr03SXxLpPvxX
+	\item ...\\
+
+\end{itemize}
+The above list is, in essence, the suggestion markers that we created. (The full list contains about eighty suggestion markers. The list is part of the submitted code.)
 
 \subsection{POS-Tagging and Lemmatization the set of Documents}\label{332_ref}
-TODO\\
-\\
+The second stage for suggestion mining lies in the POS-Tagger performance. This process is the same as the one described in unit (\ref{322_ref}) and for the sake of brevity it will not be analysed again here.
+
 \subsection{Apply Information Retrieval Methods in order to find the Suggestions}\label{333_ref}
-TODO\\
+Having created the suggestion markers, as we saw in unit (\ref{321_ref}), we have, at this point, to analyse the way with which we can find similarities between the sentences being analysed and the suggestion markers.\\
 \\
+Initially, for every sentence in the process of analysis, the POS-Tagging \& Lemmatization method (\ref{332_ref}) is applied. From the Output of this process we make good use of the information that is absolutely essential for this step. So, for every sentence we keep the following information:\\
+\begin{itemize}
+
+	\item the verb tag.
+	\item the verb lemma.
+	\item the lemmas of words ``to'', ``will''.
+	\item tags of the words ``to'', ``will''.
+	\item ``Qst'' if the sentence is interrogative.\\
+
+\end{itemize}
+
+So, the sentence that we saw above, \textit{``a change must be made''} in paragraph 5 of the law'' becomes \textit{``VbLsLdPr03SgXxLpAvXx should PtSj be VbMnLdXx03SgXxPePvXx made''}.\\
+\\
+The next step is to create a similarity score between the sentence that came up and each one of the suggestion markers. The comparison was made using TF-IDF\footnote{\url{https://en.wikipedia.org/wiki/Tf\%E2\%80\%93idf}} and Jaccard Similarity\footnote{\url{https://en.wikipedia.org/wiki/Jaccard_index}} and as we will see in the following unit, the results were satisfying enough.\\
+\\
+One more point that we need to stress is that we divided the suggestion markers in 4 categories, depending on the Grammatical mood, ``Imperative'' or ``Subjunctive'' and depending on whether the verbs are in a Past Tense (should have). The categories, as well as all the suggestion markers can be found in the ``suggestionQ file'' through the online repository\footnote{\url{https://github.com/csdRepo/OpinionMining.git}}.\\
+\\
+Finally, having made the above comparisons, only the highest score will be kept, as well as the category from which this score came up. We should also note that the sentences that contain ``Qst'' automatically get zero score because we wanted to exclude the interrogative sentences for the same reasons that were mentioned earlier.
+
 \subsection{Adding additional features for the optimization of Machine Learning Processs}\label{334_ref}
-TODO\\
-\\
+In order to achieve better results in each sentence that resulted from the above process, we counted the number of words from which it is made up.
+
 \subsection{Apply Machine Learning}\label{335_ref}
-TODO\\
-\\
+The last stage for the retrieval of suggestions is the application of a Machine Learning Process. To implement this process, a train set and a test set must be definitely determined.
+
 \subsubsection{Selecting Train and Test Set}\label{3351_ref}
-TODO\\
-\\
+In this case, too, the train set is stored in the Database. To be precise, the retrieval of the train set from the Database is done with the following query:\\
+
 \lstset{language=SQL}
 \begin{lstlisting}[frame=single, basicstyle=\small]
 SELECT
@@ -323,18 +378,34 @@ ORDER BY
 	opngv_trainset.Suggestion DESC
 LIMIT 366
 \end{lstlisting}
-TODO\\
-\\
+
+In this case, too, the test set consists of the sentences of the text, more precisely, the sentences that came up from the process (\ref{333_ref}).
 
 \subsubsection{Machine Learning Process}\label{3352_ref}
-TODO\\
-\\
+As in the Argument Extraction (\ref{3232_ref}), the Weka Framework was also used here. Again, for the sake of brevity, it will not be analysed here.
+
 \subsubsection{Machine Learning Algorithms}\label{3353_ref}
-TODO\\
-\\
+To verify the accuracy of the Train Set,we tested enough Algorithms:\\
+
+\begin{itemize}
+
+		\item Native Bayes\footnote{\url{https://en.wikipedia.org/wiki/Naive_Bayes_classifier}}
+	\item Support Vector Machines\footnote{\url{https://en.wikipedia.org/wiki/Support_vector_machine}}
+	\item Random Forest\footnote{\url{https://en.wikipedia.org/wiki/Random_forest}}
+	\item J48\footnote{\url{https://en.wikipedia.org/wiki/J48}}
+
+\end{itemize}
+
 \section{Overall Opinion Extraction}\label{34_ref}
-TODO\\
+In this final chapter, the third leg of this Thesis, where the possibility of recognising the general degree of the writer's agreement in regard with the initial public consultation text of the Greek Government was studied, will be analysed. For this process, no kind of meta-data which would have supplied this information automatically (Agree/Disagree button, Like etc.), was used. The whole process has been completed by studying exclusively the users' texts.\\
 \\
+For the effective mining of this kind of information from the texts, we used the ``Sentiment Analysis'' method, in an attempt to recognise the sentiments with which the users write their texts. Having analysed the sentiments, we noted that very often it seems that they match each writer's degree of agreement. In more detail, this process can be divided as follows:\\
+\begin{itemize}
+
+	\item Translate Documents to English (\ref{341_ref}).
+	\item Perform Sentiment Analysis  (\ref{342_ref}).
+
+\end{itemize}
 \subsection{Translate Documents to English}\label{341_ref}
 TODO\\
 \\
