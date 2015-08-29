@@ -407,11 +407,15 @@ For the effective mining of this kind of information from the texts, we used the
 
 \end{itemize}
 \subsection{Translate Documents to English}\label{341_ref}
-TODO\\
+In order to be able to perform Sentiment Analysis, we had, in the first stage, to automatically translate the texts in the English language. The reason is that all the tools that are available do not support the Greek language. Also, studying and developing software that could perform Sentiment Analysis for Greek could constitute an independent task.\\
 \\
+It makes sense to think that with automatic translation, there are many times where the meaning of a sentence is altered and the translated text has many mistakes. This problem is even greater in Greek, because it has a complex and rich Grammar and subsequently, the texts in this case may be even more altered.\\
+\\
+Nevertheless, the above alterations do not affect the application of Sentiment Analysis. This happens because during Sentiment Analysis implementation, we are more interested in the connotation of the words, i.e. how much of a negative or positive meaning a word gives to a text.\\
+\\
+For the automatic translation of texts  from Greek to English, ``Google Translate'' has been used, a service provided for free through the appropriate API\footnote{\url{https://cloud.google.com/translate/}}.
 \subsection{Perform Sentiment Analysis}\label{342_ref}
-TODO\\
-\\
+In the demo that accompanies this Thesis, there is the possibility to use two external tools that provide this kind of option.\\
 \begin{itemize}
 	\item
 	 \textbf{SentiStrength\footnote{\url{http://sentistrength.wlv.ac.uk}}:}
