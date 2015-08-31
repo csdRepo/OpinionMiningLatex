@@ -12,13 +12,16 @@ In this chapter, the efficiency of the mechanisms that were studied above will b
 In this subsection the results of the methods that were introduced in the previous chapters on the writer's argument extraction will be presented. In this subsection especially, we are going to try to present some indicators for the Argument Markers that we set. These indicators show the ``ability'' of each variable to ``find'' an Argument (\ref{411_ref}). Also, we are going to see the efficiency of each Algorithm that we tried in this procedure (\ref{412_ref}). Finally, we are going to present some diagrams that show the efficiency of the Train Set that we have created on the writer's Argument Extraction from the texts (\ref{413_ref}).
 
 \subsection{Argument Markers}\label{411_ref}
-TODO\\
-\\
+As we saw above, the corpus that was studied had a total of 1015 sentences, which make up approximately two hundred users' texts (user commentaries). Initially, we need to stress that in the corpus, the number of sentences that were characterised as Argumentative is relatively bigger that the number of sentences that were not characterised as Argumentative. This property is shown in the following diagram.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth]{figure/arguments/A_argumentative1.pdf}
 \caption{Argumentative Sentences in Train Set.}
 \end{figure}
+
+In the rest of this unit (\ref{421_ref}), class ``yes'', i.e. the sentences that are ``Argumentative'' will be symbolised with red and respectively, the sentences belonging to class ``no'' will be symbolised with blue.\\
+\\
+In the next diagrams we can see  for each one of the Argument Markers that we have set, the ability of each variable to define an Argument. The axis X shows the frequency of each variable in each sentence. What we note in most diagrams, is that as frequency increases, class ``yes'' surpasses class ``no''
 
 \begin{figure}[H]
 \centering
@@ -75,8 +78,7 @@ TODO\\
 \end{figure}
 
 \subsection{Algorithms used in Machine Learning Procedure}\label{412_ref}
-TODO\\
-\\
+In this subsection, we will see the results that the Algorithms which were used to check the accuracy of Machine Learning Process, produced. The results have been produced by carrying out classification on the Train Set and using ``10 Fold Cross Validation''\footnote{\url{http://www.opengov.gr}}.
 
 \begin{table}[H]
 \centering
@@ -120,8 +122,7 @@ Logistic Regression & {\it 0.820}     & {\it 0.819}     & {\it 0.819}     \\ \hl
 \end{tabular}
 \end{table}
 
-TODO\\
-\\
+From the above tables, it is obvious that the best results were achieved by using the ``Support Vector Machines'' Algorithm. For this reason, we will look at some useful information  about this result straight away.
 
 \begin{table}[H]
 \centering
@@ -145,8 +146,7 @@ Total Number of Instances          & {\it 1015}       & {\it -}          \\ \hli
 
 
 \subsection{Information about the Train Set}\label{413_ref}
-TODO\\
-\\
+One more measurement that was performed concerns the Train Set. More precisely, in the following diagram, the ``Error Rate'' in the ability to correctly characterize the sentences that are being analysed, appears. We can note that by using from 30\% of the Train Set (approximately 300 sentences) up to 100\%, the ``Error Rate'' is limited between 17.5\% - 18.3\%. For the next diagram, ``Support Vector Machines'' Algorithm was used.
 
 \begin{figure}[H]
 \centering
@@ -155,11 +155,10 @@ TODO\\
 \end{figure}
 
 \section{Suggestion Extraction}\label{42_ref}
-TODO\\
-\\
+For the confirmation of the results for extraction of the suggestions that the writers of the texts made, we needed to create two scenarios. Initially, we carried out ``10 Fold Cross Validation'' (\ref{421_ref}) on the Train Set. Next, we created a second scenario, according to which we divided the Train Set so that it contains an equal number of sentences that constitute suggestions and of sentences that do not. Next, we used this set as a Train Set and performed again the Machine Learning Process (\ref{422_ref}).
+
 \subsection{``10 Fold Cross Validation'' on Train Set}\label{421_ref}
-TODO\\
-\\
+As described above, initially, we tried to apply ``10 Fold cross validation'' on the  Train Set. The results are shown in the following matrix:
 
 \begin{table}[H]
 \centering
@@ -203,8 +202,7 @@ SVM             & {\it 0.820}      & {\it 0.835}  & {\it 0.786}     \\ \hline
 \end{tabular}
 \end{table}
 
-TODO\\
-\\
+From the above tables, we can see that the best results were achieved by using the ``Native Bayes'' Algorithm. For this reason, we will now see some useful information about this result.
 
 \begin{table}[H]
 \centering
