@@ -58,7 +58,7 @@ Some very usual errors are:
   
   \item Another feature is that the texts are entirely in Greek. This problem is more 	serious, because there are no tools which we needed at some point of the analysis, that support the Greek Language. Subsequently, as we will see later on, there was the need to resort to some compromising solutions.\\
   
-  \item One last issue that is worth mentioning, which constitutes a more qualitative feature, at least in the whole of texts that were studied, is the fact that the majority of users who wrote a comment are ``annoyed''. This ``annoyance'' stems from the fact that the texts that are under discussion contain laws and presidential decrees that, essentially, lead to a decrease in public spending towards the citizens. This ``annoyance'' is noted almost in the entire dataset that we studied. The problem is that the texts in which the writers agree with the initial text are limited. As a result, this issue complicates the process of acknowledging, if the writer agrees with the initial text.
+  \item One last issue that is worth mentioning, which constitutes a more qualitative feature, at least in the whole of texts that were studied, is the fact that the majority of users who wrote a comment are ``annoyed''. This ``annoyance'' stems from the fact that the texts that are under discussion contain laws and presidential decrees that, essentially, lead to a decrease in public spending towards the citizens. This ``annoyance'' is noted almost in the entire dataset that we studied. The problem is that the texts in which the writers agree with the initial text are limited. As a result, this issue complicates the process of acknowledging, if the writer agrees with the initial text. Also another serious problem is that the ``annoyance'' causes the users to make several kind of mistakes (such as grammatical, syntactical etc.).
 \end{itemize}
 
 
@@ -100,7 +100,7 @@ In order to store the database, an MySQL\footnote{\url{https://www.mysql.com}} D
 In the above layout, we can see the Entity-Relation Model that was used for storing data. The keys for each table of data have been marked with bold.
 
 \subsection{Building a Trainset}\label{315_ref}
-One last element that deals with the chapter on dataset, is characterising a total of sentences if each one of them contains an Argument or a Suggestion. We should note here that sentence separation will be analysed thoroughly later. The Train set that we created, as we will see in the chapters that follow, is needed so that the machine learning algorithms can become train, as well as to achieve a better evaluation. The set of sentences that was created contains approximately one thousand sentences.
+One last element that deals with the chapter on dataset, is characterising a total of sentences if each one of them contains an Argument or a Suggestion. We should note here that sentence separation will be analysed thoroughly later (\ref{3221_ref}). The Train set that we created, as we will see in the chapters that follow, is needed so that the machine learning algorithms can become train, as well as to achieve a better evaluation. The set of sentences that was created contains approximately one thousand sentences.
 
 
 \section{Argument Extraction}\label{32_ref}
@@ -116,9 +116,9 @@ At this point, the process with which the Argument Extraction was carried out on
 Each one of the three stages will be explained right away.
 
 \subsection{Selecting Argument Markers}\label{321_ref}
-This step, in essence, constitutes the selection process of certain ``criteria'' that will help us define what an argument is. Essentially, this process constituted the hardest part in the whole Argument Extraction stage. This step, by extension, was performed only once.\\
+This step, in essence, constitutes the selection process of certain ``criteria'' - ``Argument Markers'' that will help us define what an argument is. Essentially, this process constituted the hardest part in the whole Argument Extraction stage.\\
 \\
-Having studied enough from Related Work (which was mentioned to a great extent above), it was clear that in order to extract the arguments from the texts that we had available we would have to apply some Machine Learning process. Therefore, it is now clearer that at this step (\ref{321_ref}), we had to define some parameters which will define with a relative clarity whether a sentence is an argument or not.\\
+Having studied enough from Related Work (which was mentioned to a great extent above) in the field of the Opinion Mining, it was clear that in order to extract the arguments from the texts that we had available we would have to apply some Machine Learning process. Therefore, it is now clearer that at this step (\ref{321_ref}), we had to define some parameters which will define with a relative clarity whether a sentence is an argument or not.\\
 \\
 But before we get in the process of searching for these variables, we had one more difficulty to face. Even though it sounds relatively easy to recognise the arguments in a text, in reality it was a rather difficult process. There was great difficulty for the whole team that is working on this Project to agree on whether a sentence contains an argument or not. After a lot of discussion, we ended up with the following definition:\\
 \\
@@ -157,10 +157,11 @@ In this part we will analyse the second step in the process of argument extracti
 As it has already been mentioned above (\ref{22_ref}), the POS-Tagging procedure has as goal to analyse the grammar of the text, as well as to extract an output which will contain a recognition of what part of speech each word is. Clearly, this process is very important for Argument Extraction because it constitutes the way with which all parts of speech will be detected.
 
 \subsubsection{POS-Tagger}\label{3221_ref}
-In this Thesis, ``ILSP POS-Tagger\footnote{\url{http://nlp.ilsp.gr/soaplab2-axis/}}'' was used, which was created by the ``Institute of Language and Speech processing\footnote{\url{http://www.ilsp.gr/en}}''.
+In this Thesis, ``ILSP POS-Tagger\footnote{\url{http://nlp.ilsp.gr/soaplab2-axis/}}'' was used, which was created by the ``Institute of Language and Speech processing\footnote{\url{http://www.ilsp.gr/en}}''. Also the POS-Tagger is used in order to split the text into sentences. This feature appears in the next section (\ref{3222_ref}) in which we can see the output that the Tagger produces.
 
 \subsubsection{POS-Tagger Output}\label{3222_ref}
 From the outputs supported by POS-Tagger that we had available, we have chosen the ``xceslemma'' option, with which-apart from POS-Tagging, Lemmatization can also be accomplished. We will need the latter in the next unit that we are going to study. The output given is in XML format. An example can be seen below:\\
+\newpage
 \lstset{language=XML,
   morekeywords={id,word,lemma,tag}
 }
@@ -213,7 +214,6 @@ The last stage for argument retrieval consists of the application of a Machine L
 
 \subsubsection{Selecting Train and Test Set}\label{3231_ref}
 In this case in point, the train set is stored in the Data Base. More precisely, the train set retrieval from the Database is done with the following query:
-\newpage
 \lstset{language=SQL}
 \begin{lstlisting}[frame=single, basicstyle=\small]
 SELECT
