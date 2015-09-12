@@ -1,34 +1,86 @@
 % CREATED BY DAVID FRISK, 2015
 \chapter{Background}
-TODO\\
-\\
+As well as to understand, but also to create the individual parts that were mentioned in Chapter 1 and to interconnect them in total, studying and understanding of both basic and state of the art technologies in the field of Computer Science were essential. Some of the technologies that we studied and used to write this Thesis were the following:\\
+\begin{itemize}
+
+	\item Machine Learning (\ref{21_ref})
+	\item POS-Tagging (\ref{22_ref})
+	\item Information Retrieval (\ref{23_ref})\\
+
+\end{itemize}
+Also, a deep understanding of Greek Grammar and of the ways an argument is expressed were necessary.
+
 \section{Machine Learning}\label{21_ref}
-TODO\\
+Machine Learning is a field of Computer Science that deals with the study and construction of Algorithms that can make predictions about the data that were set as entry. These algorithms function with the construction of a model based on data that exist as entry examples, for prediction and decision making. They are based on these data instead of following strict static instructions. This technology has a wide use in problem solving where a pre-designed algorithm is impossible to use. Sometimes, (like in the case of this Thesis), Machine Learning is confused with Data Mining even though its main focus is the investigative analysis of data. Examples of Machine Learning application are ``Spam Filtering'', ``Optical Character Recognition (OCR)'', ``Search Engines'', ''POS-Tagging'' etc.
+
+\subsection{Categorization of Machine Learning Algorithms}\label{211_ref}
+The classifications that can be made based on the desired exit of the Machine Learning System are the following:\\
+\begin{itemize}
+
+	\item \textbf{Classification:} In this category, the exits are divided in two or more classes and the system must produce a model that classifies unknown entries in one of these classes. ``Spam filtering'' is an example of such classification.
+	\item \textbf{Regression:} In this category, the exits are continuous and not distinguishable. This is usually handled in a monitored way.
+	\item \textbf{Clustering:} In this category, a total number of entrances must be divided in groups. In contrast with classification, the groups are not known beforehand. For this reason, it can be characterised as an uncontrolled process.
+	\item \textbf{Destiny Estimation:} This category finds the allocation of entries in a place.
+	\item \textbf{Dimension Ability Reduction:} This category simplifies the entrances by mapping them out in a lower-dimensional place. An example is when a list of documents is given in natural language and recognising which of these files cover similar topics is needed.\\
+
+\end{itemize}
+
+\subsection{Machine Learning Algorithms}\label{212_ref}
+Examples of known algorithms which were used in this Thesis follow. In chapter four, the way they were used will be thoroughly analysed.\\
+\begin{itemize}
+	
+	\item \textbf{Native Bayes\footnote{\url{https://en.wikipedia.org/wiki/Naive_Bayes_classifier}}:} Naive Bayes is an algorithm of probabilistic classification which is based on Bayes Theorem (or Bayes rule), with strongly independent admissions. It is classified in the ``Classification'' category. The simple admission of the Algorithm is:\\
+
+\begin{equation}
+P\left(C_{k}|x\right)=\frac{P\left(C_{k}\right)P\left(x|C_{k}\right)}{P\left(x\right)}
+\end{equation}
 \\
-\subsubsection{Categorization of Machine Learning Algorithms}\label{211_ref}
-TODO\\
+\begin{example}
+	``To predict the possibility of rain we usually use some indications like the density of dark clouds in the sky.''\\
+\end{example}
+
+\begin{equation}
+P\left(raining|darkcloud\right)=\frac{P\left(raining\right)P\left(darkcloud|raining\right)}{P\left(darkcloud\right)}
+\end{equation}
 \\
-\subsubsection{Machine Learning Algorithms}\label{212_ref}
-TODO\\
+\begin{itemize}
+
+	\item P(darkcloud/raining) is the possibility of dark clouds when it rains.
+	\item P(raining) is the possibility of rain in advance.
+	\item P(darkcloud) is the possibility of a dark cloud in the sky.\\
+
+\end{itemize}
+
+
+	\item \textbf{Support Vector Machines(SVM)\footnote{\url{https://en.wikipedia.org/wiki/Support_vector_machine}}:} SVM algorithms monitor learning models connected to learning algorithms which analyse data and recognise templates. They are used for classification and regression analysis. They work taking into account a total of education models which belong to one of the two categories. An SVM education algorithm constructs a model which allocates new examples to one or the other category, making it non-probabilistic binary linear classifier. An SVM model is a representation of the examples as points in space, mapped out in such a way that the examples of the separate categories are divided by a clear gap which is as broad as possible. The new examples are then matched to that same space and are predicted to belong to one category based on which side of the gap they fall on. The model of the linear algorithm  SVM is:\\
 \\
+\textit{Given a train set D, a total of n points of the form:}
+\\
+\begin{equation}
+D=\left[(x_{i},y_{i})|x_{i}\in R^{p},y_{i}\in{1,1}\right]_{i}^{n}=1
+\end{equation}
+\\
+where $y_{i}$ is either 1 or -1, which indicates the category to which spot $x_{i}$ belongs. Each $x_{i}$ is a $P$-Dimensions ``real vector''. We want to find the hyperplane of maximum margin which separates the spots which have $y_{i}=1$ from those that have $y_{i}=-1$.
+
+\end{itemize}
 \section{Part-Of-Speech Tagging (POS-Tagging)}\label{22_ref}
-TODO\\
+In the field of Linguistics, POS-Tagging\footnote{\url{https://en.wikipedia.org/wiki/Part-of-speech_tagging}}, which is the process of tagging a word in a corpus which matches a specific part of speech, is based  on its definition and on its frame, i.e. its relation to other close and relevant words in a phrase, sentence or paragraph. A simplified form is the characterisation of the words as nouns, verbs, adjectives, adverbs etc. POS-Tagging is more difficult than to have of a list of words and the part of speech each one is, because some words can represent different parts of speech for different periods of time. This is not rare in natural language (in contrast with many artificial languages), where many words have an ambiguous meaning and use. For this reason, the application of Machine Learning is necessary. In more advanced POS-Tagging tools, techniques of Machine Learning are applied, like the SMV that we described in Unit (\ref{21_ref}).\\
 \\
+In this Thesis, a ready-made tool for POS-Tagging, ``ILSP POS-Tagger'' was used, which is based on a dictionary buy also used machine learning algorithms. This tool offers very good precision. More details about it will be given in Chapter 4.
+
 \section{Information Retrieval}\label{23_ref}
-TODO\\
+Information retrieval(IR)\footnote{\url{https://en.wikipedia.org/wiki/Information_retrieval}} is the scientific field of Computer Science that studies effective ways to search for information and data in files and meta-data relevant to files, as well as the research in data bases and in the World Wide Web. Information Retrieval is based on the data base theory, on suitable informative systems and on mathematical methods of Artificial Intelligence like the ones mentioned in Chapter (\ref{22_ref}), broad use takes place in the World Wide Web and especially by specialists in all search engines (e.g. Google). Someone can say that it has an interdisciplinary character as it borrows elements from Computer Science, Mathematics, Library Science, Cognitive Psychology, Linguistics and Statistics.\\
 \\
-\subsubsection{Information Retrieval Algorithms}\label{231_ref}
+A process of information retrieval begins when the user enters a query in the system. The queries are research requests in some data base, like for example the search of an alphanumeric in some search engine of the Web. In Information Retrieval a query does not only precise uni-vocally an item, but may times many items can match the query, maybe in different degrees of relevance.\\
+\\
+An item is an entity that is represented by some information in a data base. In order to answer the user's queries, research among the data of the base for possible answers is done. The data can be text documents, pictures, sounds or video archives.\\
+\\
+Most information retrieval systems calculate a numerical score about how well each item in the data base matches the query and classify the items according to this calculation. The items that are on top of the list appear in front of the user. The process can be repeated afterwards, if the user wishes to improve the query.
+
+\subsection{Information Retrieval Algorithms}\label{231_ref}
 TODO\\
 \\
 \section{Related Work}\label{24_ref}
 TODO\\
 \\
-\section{Equation}
-\begin{equation}
-f(t)=\left\{ \begin{array}{ll}
-1,~~~~ & t< 1 \\
-t^2 & t\geq 1
-\end{array}\right.
-\end{equation}
-
 
