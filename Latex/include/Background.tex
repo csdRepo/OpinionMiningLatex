@@ -78,9 +78,39 @@ An item is an entity that is represented by some information in a data base. In 
 Most information retrieval systems calculate a numerical score about how well each item in the data base matches the query and classify the items according to this calculation. The items that are on top of the list appear in front of the user. The process can be repeated afterwards, if the user wishes to improve the query.
 
 \subsection{Information Retrieval Algorithms}\label{231_ref}
-TODO\\
-\\
-\section{Related Work}\label{24_ref}
-TODO\\
-\\
+Example of a well-known algorithm follow, which were also used in this Thesis. In Chapter 4, the way they were used will be analysed in detail.\\
+\begin{itemize}
 
+	\item \textbf{TF-IDF (Term Frequency-Inverse Document Frequency):} The TF-IDF algorithm is an arithmetic statistical element whose goal is to reflect how important a word in a file or in a collection, is. Often, it is used as a a weighting factor in information and text retrieval. The value of TF-IDF increases in proportion to the number of times that a word appears in a text, but is counterbalanced by the frequency of the word that exists in the collection, which helps to adapt to the fact that some words appear, in general, more frequently.\\
+\\
+To interpret TF-IDF it is necessary to note that it is a product of two algorithms (term frequency, inverse document term frequency) which must be explained.\\
+\\
+The term frequency $tf_{t'd}$ of the term t in a file is defined as the number of times that $t$ appears in $d$. 
+\\
+\begin{equation}
+tf\left(t,d\right)=0.5+\frac{0.5*f\left(t,d\right)}{max\left\lbrace\left(t,d\right):t \in d\right\rbrace}
+\end{equation}
+\\
+Inverse document frequency is a way to measure how much information each word contains, i.e. if the term is frequent or rare in all the files. It is the logarithmically weighted fraction of the files that contain the word. It comes up from the division of the total number of files from the number of files that contain the term. In that way, we define the IDF (Inverse Document Frequency) of t as:
+\\
+\begin{equation}
+idf\left(t,D\right)=log*\frac{N}{|\left\lbrace d \in D :t \in d\right\rbrace|}
+\end{equation}
+\\
+Where:\\
+\begin{itemize}
+
+	\item $N$ is the total number of the collection's texts.
+	\item $|\left\lbrace d \in D :t \in d\right\rbrace|$ the number of the texts that the term appears in.So,as TF-IDF is defined the product of $tf$ and $idf$.
+
+\end{itemize}
+
+\end{itemize}
+\section{Related Work}\label{24_ref}
+One of the first approaches for argument identification is in the Doctoral Thesis  entitled ``Argumentative Zoning'', written by Teufel (1999). After this Thesis, there have been a variety of projects and Theses that are focused on how to use the public's opinions that are available in texts of electronic form, aiming at defining social tendencies and analysing their political stance. For example, the WeGov toolbox([1]Wanderhofer et al.2012) which is an online tool (http://wegov-project.eu) that gives someone the possibility to search for topics and views from different social networks. It supports the analysis and the brief presentation of views and discussions and ultimately helps those in charge of Politics to publish the information that has been extracted from the Social Media. The system even predicts stances that are expected to attract more attention.\\
+\\
+An application focused on Sentiment Analysis in political comments on Twitter is the Thesis of Diakopoulos and Ahamma([2]) Diakopoulos and Shamma,2010) which connects  timelessly the dynamic of a sentence in a Twitter discussion. For this goal, the writers use a commentary process based on Mechanic Turk (which is supported by many filters) to note the Tweets that are relevant to the discussion. In the Thesis, the total sentiment of Tweets was studied. Another study from Tumasjan et al. ([3]Tumasjan et al,2010) verifies that micro blogging (Twitter) is widely used for political discussion and expression of political view. In this Thesis,to achieve Sentiment Analysis, the writers used LIWC2007 which is a tool for Language Analysis.\\
+\\
+One more Thesis which attempts to extract arguments and separate them in Claim and Justification in texts in Greek found in Social Media is ``Argument Extraction from News,Blogs and Social Media'' and achieves a total precision by 72\% and recall by 79\%.\\
+\\
+Finally, this Thesis was based a lot on a project of [7] Christian Stab and Iryna Gurevych which is divided in two basic steps. First of all, in tracking the elements of the argument which are either ``justification'' or ``claim'' and secondly to define pairs from these components which together form a complete Argument. In their experiment, the results were  F1-Score 72.6\% for tracking the argument's components and 72,2\% for tracking the connections that constitute a complete argument.
