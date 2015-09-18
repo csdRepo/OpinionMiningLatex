@@ -5,14 +5,14 @@ In this chapter, the efficiency of the mechanisms that were studied above will b
 
 	\item Argument Extraction (\ref{41_ref})
 	\item Suggestion Extraction (\ref{42_ref})
-	\item Overall Opinion Extraction (\ref{43_ref})
+
 
 \end{itemize}
 \section{Argument Extraction}\label{41_ref}
 In this subsection the results of the methods that were introduced in the previous chapters on the writer's argument extraction will be presented. In this subsection especially, we are going to try to present some indicators for the Argument Markers that we set. These indicators show the ``ability'' of each variable to ``find'' an Argument (\ref{411_ref}). Also, we are going to see the efficiency of each Algorithm that we tried in this procedure (\ref{412_ref}). Finally, we are going to present some diagrams that show the efficiency of the Train Set that we have created on the writer's Argument Extraction from the texts (\ref{413_ref}).
 
 \subsection{Argument Markers}\label{411_ref}
-As we saw above, the corpus that was studied had a total of 1015 sentences, which make up approximately two hundred users' texts (user commentaries). Initially, we need to stress that in the corpus, the number of sentences that were characterised as Argumentative is relatively bigger that the number of sentences that were not characterised as Argumentative. This property is shown in the following diagram.
+As we saw above, the corpus that was studied had a total of 1015 sentences, which make up approximately two hundred users' texts (user commentaries). Initially, we need to stress that in the corpus, the number of sentences that were characterised as Argumentative is relatively bigger than the number of sentences that were not characterised as Argumentative. This property is shown in the following diagram.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth]{figure/arguments/A_argumentative1.pdf}
@@ -21,7 +21,7 @@ As we saw above, the corpus that was studied had a total of 1015 sentences, whic
 
 In the rest of this unit (\ref{421_ref}), class ``yes'', i.e. the sentences that are ``Argumentative'' will be symbolised with red and respectively, the sentences belonging to class ``no'' will be symbolised with blue.\\
 \\
-In the next diagrams we can see  for each one of the Argument Markers that we have set, the ability of each variable to define an Argument. The axis X shows the frequency of each variable in each sentence. What we note in most diagrams, is that as frequency increases, class ``yes'' surpasses class ``no''
+In the next diagrams we can see  for each one of the Argument Markers that we have set, the ability of each variable to define an Argument. The axis X shows the frequency of each variable in each sentence. What we note in most diagrams, is that as frequency increases, class ``yes'' surpasses class ``no''.
 
 \begin{figure}[H]
 \centering
@@ -78,7 +78,7 @@ In the next diagrams we can see  for each one of the Argument Markers that we ha
 \end{figure}
 
 \subsection{Algorithms used in Machine Learning Procedure}\label{412_ref}
-In this subsection, we will see the results that the Algorithms which were used to check the accuracy of Machine Learning Process, produced. The results have been produced by carrying out classification on the Train Set and using ``10 Fold Cross Validation''\footnote{\url{http://www.opengov.gr}}.
+In this subsection, we will see the results that the Algorithms which were used to check the accuracy of Machine Learning Process, produced. The results have been produced by carrying out classification on the Train Set and using ``10 Fold Cross Validation''\footnote{\url{https://en.wikipedia.org/wiki/Cross-validation_(statistics)}}.
 
 \begin{table}[H]
 \centering
@@ -226,7 +226,7 @@ Total Number of Instances          & {\it 1015}       & {\it -}          \\ \hli
 
 
 \subsection{Equivalent Train Set}\label{422_ref}
-In the second scenario, a different Train Set was used. We divided the Train Set in a way that it contains equal amounts of sentences that can be characterised as suggestions, compared to those that cannot. The reason is that the Train Set contains relatively less entries that refer to suggestions compare to the sentences that do not constitute suggestions. So, we used a corpus that contained two hundred sentences that are characterised as suggestions and two hundred more that are not. Next, we used this set as a Train Set and as a Test Set we used the whole corpus. The results are shown in the following tables:
+In the second scenario, a different Train Set was used. We divided the Train Set in a way that it contains equal amount of sentences that can be characterised as suggestions, compared to those that cannot. The reason is that the Train Set contains relatively less entries that refer to suggestions compare to the sentences that do not constitute suggestions. So, we used a corpus that contained two hundred sentences that are characterised as suggestions and two hundred more that are not. Next, we used this set as a Train Set and as a Test Set we used the whole corpus. The results are shown in the following tables:
 \begin{table}[H]
 \centering
 \caption{Detailed Accuracy for Class “No” (Suggestion Extraction, using Equivalent Train Set).}

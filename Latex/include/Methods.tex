@@ -40,7 +40,7 @@ As it has already been mentioned, the texts that were studied feature several od
 \begin{itemize}
   \item Initially, the first that we can notice is that the length of the texts is 	relatively short. To be precise, it is rare for them to be longer than 3000 characters (approximately 200 words, 80\% of the texts). The length of the text did not affect all the stages of the analysis. The biggest difficulty appeared in the effort to extract the degree of the writer's agreement with the initial text (more details will be given later).\\
   
-  \item A second remark is the fact that the texts that were studied do not consist an official text. By the term ``official'', we want first to declare that the texts are made up of users' comments in an online service and secondly, that they contain many errors (spelling etc). This created many difficulties in the studying of these comments. The first difficulty had to do with the tools needed in order to conduct the overall analysis of each text. The basic idea was that the tools had to be tolerant when it came to errors, at least up to a degree.\\
+  \item A second remark is the fact that the texts that were studied are not consist an official text. By the term ``official'', we want first to declare that the texts are made up of users' comments in an online service and secondly, that they contain many errors (spelling etc). This created many difficulties in the studying of these comments. The first difficulty had to do with the tools needed in order to conduct the overall analysis of each text. The basic idea was that the tools had to be tolerant when it came to errors, at least up to a degree.\\
 \\
 Some very usual errors are:
 
@@ -51,10 +51,10 @@ Some very usual errors are:
   	\item use only of capital letters
   	\item absence of punctuation
   	\item wrong sentence separation (there was no gap after the dot)
-  	\item some more errors that will not be mentioned for ease of reference\\
+  	\item other types of errors\\
 	\end{enumerate}
 
-  \item One more issue is  that there are many times when syntactic structure errors are 	spotted. This problem is directly connected to the use of POS-Tagger for the syntactic analysis (parsing) of texts. This issue affects, to some degree, the extrapolation of arguments and of proposals and counter proposals that the user makes.\\
+  \item One more issue is  that there are many times when syntactical structure errors are 	spotted. This problem is directly connected to the use of POS-Tagger for the syntactic analysis (parsing) of texts. This issue affects, to some degree, the extrapolation of arguments and of proposals and counter proposals that the user makes.\\
   
   \item Another feature is that the texts are entirely in Greek. This problem is more 	serious, because there are no tools which we needed at some point of the analysis, that support the Greek Language. Subsequently, as we will see later on, there was the need to resort to some compromising solutions.\\
   
@@ -62,7 +62,7 @@ Some very usual errors are:
 \end{itemize}
 
 
-\subsection{Choosing Set of Documents}\label{312_ref}
+\subsection{Choosing the Set of Documents}\label{312_ref}
 To continue the process, we randomly chose five different bills that contained a significant amount of users' replies. Afterwards, we selected a few, trying to eliminate the replies that we did not want to process. For example:\\
 
 \begin{itemize}
@@ -100,7 +100,7 @@ In order to store the database, an MySQL\footnote{\url{https://www.mysql.com}} D
 In the above layout, we can see the Entity-Relation Model that was used for storing data. The keys for each table of data have been marked with bold.
 
 \subsection{Building a Trainset}\label{315_ref}
-One last element that deals with the chapter on dataset, is characterising a total of sentences if each one of them contains an Argument or a Suggestion. We should note here that sentence separation will be analysed thoroughly later (\ref{3221_ref}). The Train set that we created, as we will see in the chapters that follow, is needed so that the machine learning algorithms can become train, as well as to achieve a better evaluation. The set of sentences that was created contains approximately one thousand sentences.
+One last element that deals with the chapter on dataset, is characterising a total of sentences if each one of them contains an Argument or a Suggestion. We should note here that sentence separation will be analysed thoroughly later (\ref{3221_ref}). The Train set that we created, as we will see in the chapters that follow, is needed so that the machine learning algorithms can be trained, as well as to achieve a better evaluation. The set of sentences that was created contains approximately one thousand sentences.
 
 
 \section{Argument Extraction}\label{32_ref}
@@ -118,9 +118,9 @@ Each one of the three stages will be explained right away.
 \subsection{Selecting Argument Markers}\label{321_ref}
 This step, in essence, constitutes the selection process of certain ``criteria'' - ``Argument Markers'' that will help us define what an argument is. Essentially, this process constituted the hardest part in the whole Argument Extraction stage.\\
 \\
-Having studied enough from Related Work (which was mentioned to a great extent above) in the field of the Opinion Mining, it was clear that in order to extract the arguments from the texts that we had available we would have to apply some Machine Learning process. Therefore, it is now clearer that at this step (\ref{321_ref}), we had to define some parameters which will define with a relative clarity whether a sentence is an argument or not.\\
+For this step, we decided to use Machine Learning techniques, an approach that is popular in the related literature (\ref{321_ref}].In particular, our approach consists in defining some parameters which will define will define with a relative clarity whether a sentence is an argument or not.\\
 \\
-But before we get in the process of searching for these variables, we had one more difficulty to face. Even though it sounds relatively easy to recognise the arguments in a text, in reality it was a rather difficult process. There was great difficulty for the whole team that is working on this Project to agree on whether a sentence contains an argument or not. After a lot of discussion, we ended up with the following definition:\\
+But before we get in the process of searching for these variables, we had one more difficulty to face. Even though it sounds relatively easy to recognise the arguments in a text, in reality it was a rather difficult process. In experiments with human users, it turned out that there was great difficulty, even among humans, to agree on whether a sentence contains an argument or not. To address this problem, we formulated the following definition:\\
 \\
 \textit{Sentence is likely to contain an argument if it contains the following markers:\\}
 \begin{itemize}
@@ -130,7 +130,7 @@ But before we get in the process of searching for these variables, we had one mo
 	
 \end{itemize}
 
-If there is any of the above markers in a sentence, then this sentence can be characterised as an argument (Argumentative sentence). Even with the above two conventions, in some cases it is still difficult to determine whether a sentence is an argument. More precisely, another convention has been set, with which we made an effort to exclude the sentences that are interrogative. The reason is that usually, interrogative sentences are likely to express irony. In our dataset this was actually very usual.\\
+If there is any of the above markers in a sentence, then this sentence can be characterised as an argument (Argumentative sentence). Even with the above two conventions, in some cases it is still difficult to determine whether a sentence is an argument. More precisely, another convention has been set, with which we made an effort to exclude the sentences that are interrogative. The reason is that usually, interrogative sentences are likely to express sarcasm. In our dataset this was actually very usual.\\
 \\
 Having set the above conventions, we studied a total of Argumentative Sentences, in order to be able to track down ``Argument Markers''. In essence, we looked for parts of speech (for example the number of verbs, number of adjectives and more), as well as other variables that often appear in this type of sentences. These variables were to be used in the next steps and especially in the step where the ``Machine Learning'' process is applied\\
 \\
@@ -142,10 +142,10 @@ From the study that was conducted, also combining Related work, we ended up with
 	\item \textbf{Number of Verbs in Passive Voice:} The bibliography that we had available mentions that usually the verbs that are in the passive voice are used when someone claims something concerning a particular matter. In our dataset this was not so clear. However, in the measurements done, we noted that most sentences containing an argument also contain, to a great extent, verbs that are in the passive voice.
 	\item \textbf{Key Words:} This variable refers to the number of words that were traced in a group of words that we created. This group contains words that are used when someone tries to explain or support an opinion. For example, in this group there are the words  consider, believe, admit, suppose, think, must, consequently, since, until, because, namely.
 	\item \textbf{Number of Connective Words:} This variable counts the number of linking words that were found in a sentence. In essence, this number has a direct relation to the next variable which shows the total number of words. The idea of counting the length of a sentence lies to the fact that usually, longer sentences are more likely to contain arguments. Especially when the studied dataset contains texts with arguments and political discussion.
-	\item \textbf{Total Number of Words:} respectively with the previous variable.
+	\item \textbf{Total Number of Words:} similar to the previous variable.
 	\item \textbf{Average Number of Letters in a Word:} This variable came up from the bibliography that we had available. It has been noted that this variable, especially in texts that contain political discussion, can help in a significant way to track arguments.
 	\item \textbf{Number of Adjectives:} It is the number of arguments that were found in a sentence. The logic behind this variable is the same  with  the ``Number of Verbs'' variable logic.
-	\item \textbf{Number of Adverbs:} It came up after studying the bibliography and it states the number of adverbs in a sentence.
+	\item \textbf{Number of Adverbs:} It came up after studying the reference and it states the number of adverbs in a sentence.
 	\item \textbf{Number of Nouns:} The role of this variable is equivalent to the ``Number of Adjectives'' variable.
 	\item \textbf{A Boolean Variable that States Whether a Sentence is Interrogative:} The need for this variable was explained thoroughly above.
 
@@ -160,7 +160,7 @@ As it has already been mentioned above (\ref{22_ref}), the POS-Tagging procedure
 In this Thesis, ``ILSP POS-Tagger\footnote{\url{http://nlp.ilsp.gr/soaplab2-axis/}}'' was used, which was created by the ``Institute of Language and Speech processing\footnote{\url{http://www.ilsp.gr/en}}''. Also the POS-Tagger is used in order to split the text into sentences. This feature appears in the next section (\ref{3222_ref}) in which we can see the output that the Tagger produces.
 
 \subsubsection{POS-Tagger Output}\label{3222_ref}
-From the outputs supported by POS-Tagger that we had available, we have chosen the ``xceslemma'' option, with which-apart from POS-Tagging, Lemmatization can also be accomplished. We will need the latter in the next unit that we are going to study. The output given is in XML format. An example can be seen below:\\
+From the outputs supported by POS-Tagger that we had available, we have chosen the ``xceslemma'' option. With this option beyond POS-Tagging, Lemmatization can also be accomplished. We will need the latter in the next unit that we are going to study. The output given is in XML format. An example can be seen below:\\
 \newpage
 \lstset{language=XML,
   morekeywords={id,word,lemma,tag}
@@ -237,7 +237,7 @@ FROM
 	 	ON opngv_sentence.comment_id = opngv_trainset.comment_id
 	 	AND opngv_sentence.sentence_id = opngv_trainset.sentence_id
 \end{lstlisting}
-Whereas the test set constitutes the total of the sentences of a text, which we wish to analyse. In essence, to make it clearer, two tables, which contain the same columns, are created every time. The train set table contains the data as described in units (\ref{315_ref}) and (\ref{321_ref}). The second table (test set), contains the data that came up from the process that was described in unit (\ref{322_ref}) for new texts.
+On the other hand the test set constitutes the total of the sentences of a text, which we wish to analyse. In essence, to make it clearer, two tables, which contain the same columns, are created every time. The train set table contains the data as described in units (\ref{315_ref}) and (\ref{321_ref}). The second table (test set), contains the data that came up from the process that was described in unit (\ref{322_ref}) for new texts.
 
 \subsubsection{Machine Learning Process}\label{3232_ref}
 For the application of a Machine Learning Process, the Weka Framework ``Weka 3: Data Mining Software in Java\footnote{\url{http://www.cs.waikato.ac.nz/ml/weka/}}'' was used.\\
@@ -268,7 +268,7 @@ At this section we will describe the the procedure that we followed in order to 
 	\item Apply Machine Learning (\ref{335_ref})\\
 
 \end{itemize}
-Each one from the above steps will be explained in detail, in the next sections.
+Each one of the above steps will be explained in detail, in the next sections.
 
 \subsection{Selecting Suggestion Markers}\label{331_ref}
 As in the previous chapter we have, at this stage, to set some suggestion markers i.e., some characteristics in each sentence, which, if they appear, then the sentence that is being studied probably contains a suggestion.\\
@@ -329,7 +329,7 @@ The above list is, in essence, the suggestion markers that we created. (The full
 The second stage for suggestion mining lies in the POS-Tagger performance. This process is the same as the one described in unit (\ref{322_ref}) and for the sake of brevity it will not be analysed again here.
 
 \subsection{Apply Information Retrieval Methods in order to find the Suggestions}\label{333_ref}
-Having created the suggestion markers, as we saw in unit (\ref{321_ref}), we have, at this point, to analyse the way with which we can find similarities between the sentences being analysed and the suggestion markers.\\
+Having created the suggestion markers, as we saw in subsection (\ref{321_ref}), we have, at this point, to analyse the way with which we can find similarities between the sentences being analysed and the suggestion markers.\\
 \\
 Initially, for every sentence in the process of analysis, the POS-Tagging \& Lemmatization method (\ref{332_ref}) is applied. From the Output of this process we make good use of the information that is absolutely essential for this step. So, for every sentence we keep the following information:\\
 \begin{itemize}
@@ -344,7 +344,7 @@ Initially, for every sentence in the process of analysis, the POS-Tagging \& Lem
 
 So, the sentence that we saw above, \textit{``a change must be made''} in paragraph 5 of the law'' becomes \textit{``VbLsLdPr03SgXxLpAvXx should PtSj be VbMnLdXx03SgXxPePvXx made''}.\\
 \\
-The next step is to create a similarity score between the sentence that came up and each one of the suggestion markers. The comparison was made using TF-IDF\footnote{\url{https://en.wikipedia.org/wiki/Tf\%E2\%80\%93idf}} and Jaccard Similarity\footnote{\url{https://en.wikipedia.org/wiki/Jaccard_index}} and as we will see in the following unit, the results were satisfying enough.\\
+The next step is to create a similarity score between the sentence that came up and each one of the suggestion markers. The comparison was made using TF-IDF\footnote{\url{https://en.wikipedia.org/wiki/Tf\%E2\%80\%93idf}} and Jaccard Similarity\footnote{\url{https://en.wikipedia.org/wiki/Jaccard_index}} and as we will see in the following subsection, the results were satisfying enough.\\
 \\
 One more point that we need to stress is that we divided the suggestion markers in 4 categories, depending on the Grammatical mood, ``Imperative'' or ``Subjunctive'' and depending on whether the verbs are in a Past Tense (should have). The categories, as well as all the suggestion markers can be found in the ``suggestionQ file'' through the online repository\footnote{\url{https://github.com/csdRepo/OpinionMining.git}}.\\
 \\
@@ -357,7 +357,7 @@ In order to achieve better results in each sentence that resulted from the above
 The last stage for the retrieval of suggestions is the application of a Machine Learning Process. To implement this process, a train set and a test set must be definitely determined.
 
 \subsubsection{Selecting Train and Test Set}\label{3351_ref}
-In this case, too, the train set is stored in the Database. To be precise, the retrieval of the train set from the Database is done with the following query:\\
+In this case the train set is stored in the Database. To be precise, the retrieval of the train set from the Database is done with the following query:\\
 
 \lstset{language=SQL}
 \begin{lstlisting}[frame=single, basicstyle=\small]
@@ -397,7 +397,7 @@ To verify the accuracy of the Train Set,we tested enough Algorithms:\\
 \end{itemize}
 
 \section{Overall Opinion Extraction}\label{34_ref}
-In this final chapter, the third leg of this Thesis, where the possibility of recognising the general degree of the writer's agreement in regard with the initial public consultation text of the Greek Government was studied, will be analysed. For this process, no kind of meta-data which would have supplied this information automatically (Agree/Disagree button, Like etc.), was used. The whole process has been completed by studying exclusively the users' texts.\\
+In this final chapter, the third leg of this Thesis, where the possibility of recognising the general degree of the writer's agreement with regards to the initial public consultation text of the Greek Government was studied, will be analysed. For this process, no kind of meta-data which would have supplied this information automatically (Agree/Disagree button, Like etc.), was used. The whole process has been completed by studying exclusively the users' texts.\\
 \\
 For the effective mining of this kind of information from the texts, we used the ``Sentiment Analysis'' method, in an attempt to recognise the sentiments with which the users write their texts. Having analysed the sentiments, we noted that very often it seems that they match each writer's degree of agreement. In more detail, this process can be divided as follows:\\
 \begin{itemize}

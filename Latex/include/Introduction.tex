@@ -13,7 +13,7 @@ Therefore a list of questions comes up:\\
 
 \begin{itemize}
 
-	\item How can we extract data from unstructured pain texts?
+	\item How can we extract data from unstructured plain texts?
 	\item Is it possible to extract qualitative data (arguments) from these texts?
 	\item Is it possible for the above to be done on every type of texts, without being affected by the subject and the size?\\
 
@@ -43,9 +43,9 @@ The above functions, in essence, could help many practical applications, not onl
 
 \begin{itemize}
 
-	\item \textbf{Search Engines:} So far, many search engines which have the ability to retrieve information that the user is looking for, exist. This search sometimes is done by using methods and algorithms from the field of Information Retrieval (TF-IDF, PageRank and more) and some times by using a Query Language if we refer to Link Open Data. In both cases, the way information is retrieved cannot offer more qualitative characteristics, especially if we think about the subject of argumentation. Therefore, let's imagine the abilities that a search engine, which could retrieve information and combine them with key words, would  provide us with. In order to make it clearer, we are going to give some examples in query form. \textit{``Find the arguments that are in favour of buying X car''}. \textit{``Find the arguments that contradict the arguments that are in favour of buying X car''}. \textit{``Find all the arguments that are against Bill Y''}, \textit{``''Find everyone who is against Bill Z''} etc. (The thought for the existence of such a search Engine has been expressed by Giorgos Flouris, Antonis Bikakis, Theodore Patkos, Dimitris Plexousakis. Globally Interconnecting Persuasive Arguments: The vision of the Persuasive Web. Technical Report. FORTH-ICS/TR-438, November 2013).
+	\item \textbf{Search Engines:} So far, many search engines which have the ability to retrieve information that the user is looking for, exist. This search sometimes is done by using methods and algorithms from the field of Information Retrieval (TF-IDF, PageRank etc.) and some cases by using a Query Language if we refer to Link Open Data. In both cases, the way information is retrieved cannot offer more qualitative characteristics, especially if we think about the subject of argumentation. Therefore, let's imagine the abilities that a search engine, which could retrieve information and combine them with key words, would  provide us with. In order to make it clearer, we are going to give some examples in query form. \textit{``Find the arguments that are in favour of buying X car''}. \textit{``Find the arguments that contradict the arguments that are in favour of buying X car''}. \textit{``Find all the arguments that are against Bill Y''}, \textit{``''Find everyone who is against Bill Z''} etc. (The thought for the existence of such a search Engine has been expressed by Giorgos Flouris, Antonis Bikakis, Theodore Patkos, Dimitris Plexousakis. Globally Interconnecting Persuasive Arguments: The vision of the Persuasive Web. Technical Report. FORTH-ICS/TR-438, November 2013).
 	\item \textbf{Journalism:} The creation of a system which could extract all the above information, would help this field a lot. A journalist could study the argumentation of politicians and draw conclusions about the opinions someone has expressed  in a specific amount of time. Of course, we could look for arguments and counterarguments on a matter and also we could check if certain individuals change their stance on a matter as time goes by. We can think of many other scenarios/possible applications.
-	\item \textbf{Politics/Administration:} This tool could frame an online consultation service, especially in administration and decision making with the citizens' participation. Some of the functions that the system we creates offers could help in that direction. For example, we could retrieve all the counter proposals/disagreements.\\
+	\item \textbf{Politics/Administration:} This tool could frame an online consultation service, especially in administration and decision making with the citizens' participation. Some of the functions that the system we develop offers could help in that direction. For example, we could retrieve all the counter proposals/disagreements.\\
 
 \end{itemize}
 
@@ -54,11 +54,11 @@ First of all, in order to understand this technique, it is necessary to define t
 \\
 \textbf{Argument:} A reasoning with which someone supports or opposes a specific point of view.\\
 \\
-The parts of an Argument are ``Assumption''-``Claim''-``Conclusion''. The assumption is the sentence with which someone claims/assumes something. Claim is the sentence with which someone tries to reaffirm his assumption. Finally, the conclusion is considered to be the logical implication of the assumption and of the claim. Together with the parts of the argument, it is essential to define the connections between them.\\
+The parts of an Argument are ``Premise''-``Claim''-``Conclusion''. The premise is the sentence with which someone claims/assumes something. Claim is the sentence with which someone tries to reaffirm his assumption. Finally, the conclusion is considered to be the logical implication of the assumption and of the claim. Together with the parts of the argument, it is essential to define the connections between them.\cite{(6)}\cite{(7)}\\
 \begin{itemize}
 
-	\item An assumption can be a claim and vice versa but not necessarily.
-	\item An assumption can oppose a claim or support it.\\
+	\item A premise can be a claim and vice versa but not necessarily.
+	\item A premise can oppose a claim or support it.\\
 
 \end{itemize}
 
@@ -68,7 +68,7 @@ The parts of an Argument are ``Assumption''-``Claim''-``Conclusion''. The assump
 
 In the above example (1.2.1), we can see an argument that is made up of the assumption \textbf{(2)} which is supported by the claim \textbf{(1)}.\\
 \\
-So, Argument Extraction is defined as the process of defining of arguments together with their components in the text. It is noted that it constitutes a complicated enough process, as the definition of a sentence as an argument with Grammar rules is not clear enough. This is because beyond Grammar rules, the understanding of the text's topic is necessary, as well as the semantics of the words that are directly linked to the topic. There are words whose interpretation changes according to the topic and the style of the text. For example, it is not possible to understand with grammatical analysis (no matter what depths it reaches), whether someone is being ironic or whether a phrase is used in a literal or a figurative sense, let alone in comments which are basically unstructured, brief and with many errors that many times, even if they are made under a specific topic, do not seem entirely relevant.
+So, Argument Extraction is defined as the process of identifying arguments together with their components in the text. It is noted that it constitutes a complicated enough process, as the definition of a sentence as an argument with Grammar rules is not clear enough. This is because beyond Grammar rules, the understanding of the text's topic is necessary, as well as the semantics of the words that are directly linked to the topic. There are words whose interpretation changes according to the topic and the style of the text. For example, it is not possible to understand with grammatical analysis (no matter what depths it reaches), whether someone is being ironic or whether a phrase is used in a literal or a figurative sense, let alone in comments which are basically unstructured, brief and with many errors that many times, even if they are made under a specific topic, do not seem entirely relevant.
 
 \section{Suggestion Extraction}
 In this part,the clarification of the term ''suggestion'' is considered necessary.\\
