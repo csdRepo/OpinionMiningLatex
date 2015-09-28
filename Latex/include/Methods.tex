@@ -126,6 +126,13 @@ At this point, the process with which the Argument Extraction was carried out on
 	\item Applying machine learning  to the Argument Markers (\ref{323_ref}).\\
 
 \end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{figure/methods/argument_extraction.pdf}
+\caption{Argument Extraction Process}
+\end{figure}
+
 Each one of the three stages will be explained right away.
 
 \subsection{Selecting Argument Markers}\label{321_ref}
@@ -174,7 +181,7 @@ In this Thesis, ``ILSP POS-Tagger\footnote{\url{http://nlp.ilsp.gr/soaplab2-axis
 
 \subsubsection{POS-Tagger Output}\label{3222_ref}
 From the outputs supported by POS-Tagger that we had available, we have chosen the ``xceslemma'' option. With this option beyond POS-Tagging, Lemmatization can also be accomplished. We will need the latter in the next unit that we are going to study. The output given is in XML format. An example can be seen below:\\
-%\newpage
+\newpage
 \lstset{language=XML,
   morekeywords={id,word,lemma,tag}
 }
@@ -209,7 +216,24 @@ The text that was given as input was \textit{``The output which is given is in X
 	\item \textbf{Id:} an auto increment identifier given in every word of the text
 	\item \textbf{Word:} the initial word of the text
 	\item \textbf{Tag:} the Grammar concerning the particular word. For example, verbs start with ``Vb'' and nouns with ``No''. The whole tagset can be found here:\\ \url{http://nlp.ilsp.gr/nlp/tagset_examples/tagset_en/}.
-	\item \textbf{Lemma:} it is the dictionary entry of each word. For example, we note that the verb ``given'' has ``give'' as its lemma.
+	\item \textbf{Lemma:} it is the dictionary entry of each word. For example, we note that the verb ``given'' has ``give'' as its lemma.\\
+
+\end{itemize}
+
+Although we gave a link to the tagset of the POS-Tagger, it is important at this point to give a brief explanation. For example, the tag ``VbIsIdPr03SgXxIpAvXx'' means:\\
+
+\begin{itemize}
+
+	\item \textbf{Vb:} verb
+	\item \textbf{Is:} Impersonal
+	\item \textbf{Id:} Indicative
+	\item \textbf{Pr:} Present
+	\item \textbf{03:} Third Person
+	\item \textbf{Sg:} Singular
+	\item \textbf{Xx:} Gender, No Value
+	\item \textbf{Ip:} Imperfective
+	\item \textbf{Av:} Active
+	\item \textbf{Xx:} Case, No Value
 
 \end{itemize}
 
@@ -223,11 +247,14 @@ Finally, the data from the Parsing of XML file (\ref{3223_ref}) are stored in th
 INSERT INTO opngv_argument VALUES (values..)
 \end{lstlisting}
 
+
 \subsection{Apply Machine Learning}\label{323_ref}
 The last stage for argument retrieval consists of the application of a Machine Learning process. In order for this process to be accomplished, a train set and a test set should have been clearly set.
 
+%\newpage
 \subsubsection{Selecting Train and Test Set}\label{3231_ref}
 In this case in point, the train set is stored in the Data Base. More precisely, the train set retrieval from the Database is done with the following query:
+\newpage
 \lstset{language=SQL}
 \begin{lstlisting}[frame=single, basicstyle=\small]
 SELECT
@@ -282,6 +309,13 @@ At this section we will describe the the procedure that we followed in order to 
 	\item Apply Machine Learning (\ref{335_ref})\\
 
 \end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{figure/methods/suggestion_extraction.pdf}
+\caption{Suggestion Extraction Process}
+\end{figure}
+
 Each one of the above steps will be explained in detail, in the next sections.
 
 \subsection{Selecting Suggestion Markers}\label{331_ref}
@@ -298,7 +332,7 @@ Starting with the aforementioned concept, we noted that the use exclusively of G
 To make the above process clearer: Initially, using the ``ILSP POS-Tagger'' output, we noted the Grammar tags (\ref{3222_ref}), as well as the lemmas of verbs (\ref{3222_ref}) in order to create a list of verbs that are involved in cases where a sentence can be considered  as a suggestion. We can say that we noted the verbs which define the meaning of a sentence, making it a suggestion.\\
 \\
 An example can make the concept that was presented even clearer: Given the sentence \textit{``a change in paragraph 5 of the law  must be made..''} we noted that, in this example, ``must be made'' plays a determining role in order to put across the meaning of the sentence as a suggestion. This particular part of the sentence also has a particular Grammatical form.\\
-\newpage
+%\newpage
 \lstset{language=XML,
   morekeywords={id,word,lemma,tag}
 }
@@ -337,7 +371,7 @@ More precisely, we noticed that some tags, such as ``VbLsLdPr03SgXxLpAvXx'' and 
 	\item ...\\
 
 \end{itemize}
-The above list is, in essence, the suggestion markers that we created. (The full list contains about eighty suggestion markers. The list is part of the submitted code.)
+The above list is, in essence, the suggestion markers that we created. (The full list contains about eighty suggestion markers. The list is part of the submitted code.) Also some information about the POS-Tagger tagset can be found in section (\ref{3222_ref}).
 
 \subsection{POS-Tagging and Lemmatization the set of Documents}\label{332_ref}
 The second stage for suggestion mining lies in the POS-Tagger performance. This process is the same as the one described in unit (\ref{322_ref}) and for the sake of brevity it will not be analysed again here.
@@ -372,7 +406,7 @@ The last stage for the retrieval of suggestions is the application of a Machine 
 
 \subsubsection{Selecting Train and Test Set}\label{3351_ref}
 In this case the train set is stored in the Database. To be precise, the retrieval of the train set from the Database is done with the following query:\\
-
+\newpage
 \lstset{language=SQL}
 \begin{lstlisting}[frame=single, basicstyle=\small]
 SELECT
@@ -417,9 +451,16 @@ For the effective mining of this kind of information from the texts, we used the
 \begin{itemize}
 
 	\item Translate Documents to English (\ref{341_ref}).
-	\item Perform Sentiment Analysis  (\ref{342_ref}).
+	\item Perform Sentiment Analysis  (\ref{342_ref}).\\
 
 \end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{figure/methods/overall_extraction.pdf}
+\caption{Suggestion Extraction Process}
+\end{figure}
+
 \subsection{Translate Documents to English}\label{341_ref}
 In order to be able to perform Sentiment Analysis, we had, in the first stage, to automatically translate the texts in the English language. The reason is that all the tools that are available do not support the Greek language. Also, studying and developing software that could perform Sentiment Analysis for Greek could constitute an independent task.\\
 \\
