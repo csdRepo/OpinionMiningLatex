@@ -152,6 +152,7 @@ Total Number of Instances          & {\it 1015}       & {\it -}          \\ \hli
 \end{tabular}
 \end{table}
 
+We can also note that the results which all the algorithms that we tried produced  have small variations, they all produce approximately 0.8 F-Measure for both classes. A more important observation, though, is that the F-Measure for both classes (``Yes'', ``No'') also does not have many variations. This is especially important because in the dataset we studied, we noted that there is an equal partition between the sentences that are arguments and those which are not. Also, it is important because as it results from the above tables, the algorithms have the same ability to define correctly whether a sentence belongs to class ``Yes'' or class ``No''.
 
 \subsection{Information about the Train Set}\label{413_ref}
 One more measurement that was performed concerns the Train Set. More precisely, in the following diagram, the ``Error Rate'' in the ability to correctly characterize the sentences that are being analysed, appears. We can note that by using from 30\% of the Train Set (approximately 300 sentences) up to 100\%, the ``Error Rate'' is limited between 17.5\% - 18.3\%. For the next diagram, ``Support Vector Machines'' Algorithm was used.
@@ -232,6 +233,11 @@ Total Number of Instances          & {\it 1015}       & {\it -}          \\ \hli
 \end{tabular}
 \end{table}
 
+The above results have been produced by executing ``10 Fold cross validation'' on the Trainset we created, whereas in the arguments section we noticed that a relatively small percentage of the sentences (almost 20\%) is enough to stabilise the error rate at a low level. In this case, however, the same thing doesn't happen. We see that the algorithms that were applied  have an extremely good ability to correctly characterise the sentences of the text that are not suggestions. In case, however, we want to characterise a sentence as a suggestion, there is a weakness, and low results (approximately 0.5 in the F-measure scale), are produced. This matter is especially important because it suggests that the algorithms in reality cannot characterise a sentence correctly as a suggestion or not.\\
+\\
+The main reason why this particularity occurs (good percentages for class ``No'', lower percentages for class ``Yes'' is that  the Trainset on which ``10 Fold cross validation'' was executed, created  very few sentences that are characterised as suggestions, so only a small sample was chosen during the execution of ``10 Fold cross validation''. To better understand this problem, we should think about the following.\\
+\\
+During the execution of ``10 fold cross validation'', the total of the data is divided in ten parts and then a part is chosen as a train set and the rest of the total as the test set. In our case, we had a sample of approximately 100 sentences as the train set, which contained very few sentences which are suggestions (in total there were about 170 sentences). So, in order to overcome the above problem and to be able to check if the process that was executed was correct, we tried a different tactic,which will be described in the next unit (\ref{422_ref}).
 
 \subsection{Equivalent Train Set}\label{422_ref}
 In the second scenario, a different Train Set was used. We divided the Train Set in a way that it contains equal amount of sentences that can be characterised as suggestions, compared to those that cannot. The reason is that the Train Set contains relatively less entries that refer to suggestions compare to the sentences that do not constitute suggestions. So, we used a corpus that contained two hundred sentences that are characterised as suggestions and two hundred more that are not. Next, we used this set as a Train Set and as a Test Set we used the whole corpus. The results are shown in the following tables:
@@ -299,6 +305,7 @@ Total Number of Instances          & {\it 1015}       & {\it -}          \\ \hli
 \end{tabular}
 \end{table}
 
+We observe that the method we chose in order to define our train set, succeeded much better results. Still, even if the results are quite satisfying, we are of the opinion that an even better result is possible.
 
 %\section{Overall Opinion Extraction}\label{43_ref}
 %For the third part of this Thesis, an extensive evaluation did not take place because the dataset we processed did not contain sufficient data. More precisely, almost all users' texts express a negative opinion, subsequently there is only a small number of texts that can be characterised as presenting a positive opinion. This fact creates doubts about the quality of the process. To be more precise, the measurements we carried out show that the results are realistic enough, i.e. the majority of the sentences were characterised as ``Negative''. On the other hand, we cannot make an evaluation about the sentences that are characterised as ``Positive''
