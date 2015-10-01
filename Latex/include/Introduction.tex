@@ -1,11 +1,19 @@
 % CREATED BY DAVID FRISK, 2015
 \chapter{Introduction}
-The goal of this Thesis is the study and creation of a system which will be able to derive and analyse information from citizens' commentaries on Bills which are available for public consultation from the Greek Government via the OpenGov website (\url{http://www.opengov.gr/}). More precisely, an effort is made to analyse information that exists mainly in unstructured writing by which someone can express their opinion on certain law articles of Bills about which the Greek Government has asked for the opinion of the Greek citizens, as well as their separation in suggestions that contain certain information. Also, we attempt to analyse whether the commentaries express a negative or a positive view on the laws or the Bill.\\
+The goal of this Thesis is the study and creation of a system which will be able to derive and analyse information from citizens' commentaries on Bills which are available for public consultation from the Greek Government via the OpenGov website (\url{http://www.opengov.gr/}). More precisely, an effort is made to analyse information that exists mainly in unstructured writing by which citizens can express their opinion on certain law articles of Bills about which the Greek Government has asked for the opinion of the Greek citizens, as well as their separation in suggestions that contain certain information. Also, we attempt to analyse whether the commentaries express a negative or a positive view on the laws or the Bill.\\
 \\
-Finally, information about whether a sentence supports the writer's opinion, i.e. whether this sentence constitutes a writer's argument as well as whether the writer suggests something else in the text's sentences. Based on the above, it is considered necessary to set apart three main and autonomous techniques which help in the extraction of this information. The first one is ``Argument Extraction'', which aims at finding the sentences with which the writer argues for or against a law. The second is the ``Extraction of  Suggestions and Counter-Suggestions'', which aims at finding the sentences in the text by which the writer makes a suggestion or a counter suggestion. The last one is ``General Opinion Extraction'', i.e. finding out whether the commentator of the law is positive or negative towards it.
+Finally, we extract information about whether a sentence supports the writer's opinion, i.e. whether this sentence constitutes a writer's argument as well as whether the writer suggests something else in the text's sentences. Based on the above, it is considered necessary to set apart three main and autonomous techniques which help in the extraction of this information.\\
+
+\begin{itemize}
+
+	\item The first one is ``Argument Extraction'', which aims at finding the sentences with which the writer argues for or against a law.
+	\item The second is the ``Extraction of  Suggestions and Counter-Suggestions'', which aims at finding the sentences in the text by which the writer makes a suggestion or a counter suggestion.
+	\item The last one is ``General Opinion Extraction'', i.e. finding out whether the commentator of the law is positive or negative towards it.
+
+\end{itemize}
 
 \section{Motivation}
-In the past years, a rapid increase in the information published on the World Wide Web has been noted. It is a fact that recent researches show that the rates keeps increasing very quickly. The phrase that is used in all scientific articles that study the increase of information on the Internet, \textit{``Internet is growing at lighting speed''} is characteristic.\\
+In the past years, a rapid increase in the information published on the World Wide Web has been noted. It is a fact that recent researches show that the rate keeps increasing very quickly. The phrase that is used in all scientific articles that study the increase of information on the Internet, \textit{``Internet is growing at lighting speed''} is characteristic.\\
 \\
 From the above ascertainment we can easily imagine that a big part of the information that is published does not constitute simply a part of a text in a random page. More precisely, it has been noted that the volume of information that is published in Social Media, Social Networks, Forums and generally in public consultation platforms keeps increasing at a rate proportional to  the increase of the total information in the World Wide Web.\\
 \\
@@ -25,12 +33,11 @@ Based on the above indicative questions, it makes sense to assume that it is nec
 \\
 Apart from the need that was described in the three questions, it is important to define some practical applications for the issues that are being studied in this Thesis.\\
 \\
-But first, we have to give a very brief description of the abilities of the system that was created at the same time with the writing of this Thesis (a brief one because they will be described in detail later on).\\
+But first, we have to give a very brief description of the abilities of the system that was created at the same time with the writing of this Thesis.\\% (a brief one because they will be described in detail later on).\\
 \\
 First, we have to note that the texts we study are users' answers in the Greek Government's Public Consultation service.\\
 \\
-Functions:\\
-
+Our system has the following abilities:\\
 \begin{itemize}
 
 	\item Automatic extraction of proposals and counter proposal that users make in a text.
@@ -43,7 +50,7 @@ The above functions, in essence, could help many practical applications, not onl
 
 \begin{itemize}
 
-	\item \textbf{Search Engines:} So far, many search engines which have the ability to retrieve information that the user is looking for, exist. This search sometimes is done by using methods and algorithms from the field of Information Retrieval (TF-IDF, PageRank etc.) and some cases by using a Query Language if we refer to Link Open Data. In both cases, the way information is retrieved cannot offer more qualitative characteristics, especially if we think about the subject of argumentation. Therefore, let's imagine the abilities that a search engine, which could retrieve information and combine them with key words, would  provide us with. In order to make it clearer, we are going to give some examples in query form. \textit{``Find the arguments that are in favour of buying X car''}. \textit{``Find the arguments that contradict the arguments that are in favour of buying X car''}. \textit{``Find all the arguments that are against Bill Y''}, \textit{``''Find everyone who is against Bill Z''} etc. (The thought for the existence of such a search Engine has been expressed by Giorgos Flouris, Antonis Bikakis, Theodore Patkos, Dimitris Plexousakis. Globally Interconnecting Persuasive Arguments: The vision of the Persuasive Web. Technical Report. FORTH-ICS/TR-438, November 2013).
+	\item \textbf{Search Engines:} So far, many search engines which have the ability to retrieve information that the user is looking for, exist. This search sometimes is done by using methods and algorithms from the field of Information Retrieval (TF-IDF, PageRank etc.) and some cases by using a Query Language if we refer to Link Open Data. In both cases, the way information is retrieved cannot offer more qualitative characteristics, especially if we think about the subject of argumentation. Therefore, let's imagine the abilities that a search engine, which could retrieve information and combine it with key words, would  provide us with. In order to make it clearer, we are going to give some examples in query form. \textit{``Find the arguments that are in favour of buying X car''}. \textit{``Find the arguments that contradict the arguments that are in favour of buying X car''}. \textit{``Find all the arguments that are against Bill Y''}, \textit{``''Find everyone who is against Bill Z''} etc. (The thought for the existence of such a search Engine has been expressed by Giorgos Flouris, Antonis Bikakis, Theodore Patkos, Dimitris Plexousakis. Globally Interconnecting Persuasive Arguments: The vision of the Persuasive Web. Technical Report. FORTH-ICS/TR-438, November 2013).
 	\item \textbf{Journalism:} The creation of a system which could extract all the above information, would help this field a lot. A journalist could study the argumentation of politicians and draw conclusions about the opinions someone has expressed  in a specific amount of time. Of course, we could look for arguments and counterarguments on a matter and also we could check if certain individuals change their stance on a matter as time goes by. We can think of many other scenarios/possible applications.
 	\item \textbf{Politics/Administration:} This tool could frame an online consultation service, especially in administration and decision making with the citizens' participation. Some of the functions that the system we develop offers could help in that direction. For example, we could retrieve all the counter proposals/disagreements.\\
 
@@ -63,7 +70,7 @@ The parts of an Argument are ``Premise''-``Claim''-``Conclusion''. The premise i
 \end{itemize}
 
 \begin{example}
-``\textbf{(1)} Museums and Art galleries offer a better understanding of the Arts to the public, compared to the Internet. \textbf{(2)} Because in most museums and Art galleries, a detailed description of the artist's background is provided.''\\
+``\textbf{(1)} Museums and Art galleries offer a better understanding of the Arts to the public, compared to the Internet, \textbf{(2)} because in most museums and Art galleries, a detailed description of the artist's background is provided.''\\
 \end{example}
 
 In the above example (1.2.1), we can see an argument that is made up of the assumption \textbf{(2)} which is supported by the claim \textbf{(1)}.\\

@@ -9,7 +9,7 @@ In this chapter, the efficiency of the mechanisms that were studied above will b
 
 \end{itemize}
 \section{Argument Extraction}\label{41_ref}
-In this subsection the results of the methods that were introduced in the previous chapters on the writer's argument extraction will be presented. In this subsection especially, we are going to try to present some indicators for the Argument Markers that we set. These indicators show the ``ability'' of each variable to ``find'' an Argument (\ref{411_ref}). Also, we are going to see the efficiency of each Algorithm that we tried in this procedure (\ref{412_ref}). Finally, we are going to present some diagrams that show the efficiency of the Train Set that we have created on the writer's Argument Extraction from the texts (\ref{413_ref}).
+In this section the results of the methods that were introduced in the previous chapters on the writer's argument extraction will be presented. Especially, we are going to try to present some indicators for the Argument Markers that we set. These indicators show the ``ability'' of each variable to ``find'' an Argument (\ref{411_ref}). Also, we are going to see the efficiency of each Algorithm that we tried in this procedure (\ref{412_ref}). Finally, we are going to present some diagrams that show the efficiency of the Train Set that we have created on the writer's Argument Extraction from the texts (\ref{413_ref}).
 
 \subsection{Argument Markers}\label{411_ref}
 As we saw above, the corpus that was studied had a total of 1015 sentences, which make up approximately two hundred users' texts (user commentaries). Initially, we need to stress that in the corpus, the number of sentences that were characterised as Argumentative is relatively bigger than the number of sentences that were not characterised as Argumentative. This property is shown in the following diagram.
@@ -97,7 +97,7 @@ In this subsection, we will see the results that the Algorithms which were used 
 {\bf Algorithm}     & {\bf Precision} & {\bf Recall}    & {\bf F-Measure} \\ \hline
 SVM                 & {\it 0.815}     & {\it 0.830}     & {\bf 0.823} \\
 Random Forest       & {\bf 0.818} 	 & {\it 0.818}     & {\it 0.818}     \\
-Native Bayes        & {\it 0.718}     & {\bf 0.899}     & {\it 0.798}     \\
+Naive Bayes        & {\it 0.718}     & {\bf 0.899}     & {\it 0.798}     \\
 Logistic Regression & {\it 0.801}     & {\it 0.819}     & {\it 0.819}     \\ \hline
 \end{tabular}
 \end{table}
@@ -111,7 +111,7 @@ Logistic Regression & {\it 0.801}     & {\it 0.819}     & {\it 0.819}     \\ \hl
 {\bf Algorithm}     & {\bf Precision} & {\bf Recall}    & {\bf F-Measure} \\ \hline
 SVM                 & {\it 0.836}     & {\it 0.821}     & {\bf 0.828} \\
 Random Forest       & {\it 0.827}     & {\bf 0.827}	   & {\it 0.827}     \\
-Native Bayes        & {\bf 0.873} 	 & {\it 0.663}     & {\it 0.754}     \\
+Naive Bayes        & {\bf 0.873} 	 & {\it 0.663}     & {\it 0.754}     \\
 Logistic Regression & {\it 0.837}     & {\it 0.802}     & {\it 0.819}     \\ \hline
 \end{tabular}
 \end{table}
@@ -125,7 +125,7 @@ Logistic Regression & {\it 0.837}     & {\it 0.802}     & {\it 0.819}     \\ \hl
 {\bf Algorithm}     & {\bf Precision} & {\bf Recall}    & {\bf F-Measure} \\ \hline
 SVM                 & {\bf 0.826} 	 & {\bf 0.826}     & {\bf 0.826} \\
 Random Forest       & {\it 0.823}     & {\it 0.823}     & {\it 0.823}     \\
-Native Bayes        & {\it 0.797}     & {\it 0.778}     & {\it 0.776}     \\
+Naive Bayes        & {\it 0.797}     & {\it 0.778}     & {\it 0.776}     \\
 Logistic Regression & {\it 0.820}     & {\it 0.819}     & {\it 0.819}     \\ \hline
 \end{tabular}
 \end{table}
@@ -138,7 +138,7 @@ From the above tables, it is obvious that the best results were achieved by usin
 \label{44_table_ref}
 \begin{tabular}{lll}
 \hline
-                                   & {\bf Frequenncy} & {\bf Percentage} \\ \hline
+                                   & {\bf Frequency} & {\bf Percentage} \\ \hline
 Correctly Classified Instances     & {\it 838}        & {\it 82.56\%}    \\
 Incorrectly Classified Instances   & {\it 177}        & {\it 17.4383}    \\
 Kappa statistic                    & {\it 0.6512}     & {\it -}          \\
@@ -178,7 +178,7 @@ As described above, initially, we tried to apply ``10 Fold cross validation'' on
 {\bf Algorithm} & {\bf Precision} & {\bf Recall} & {\bf F-Measure} \\ \hline
 J48             & {\it 0.881}     & {\it 0.923}  & {\it 0.901}     \\
 Random Forest   & {\it 0.890}      & {\it 0.915}  & {\it 0.902}     \\
-Native Bayes    & {\bf 0.912}     & {\it 0.915}  & {\it 0.604}     \\
+Naive Bayes    & {\bf 0.912}     & {\it 0.915}  & {\it 0.604}     \\
 SVM             & {\it 0.839}     & {\bf 0.989}  & {\bf 0.908}     \\ \hline
 \end{tabular}
 \end{table}
@@ -192,7 +192,7 @@ SVM             & {\it 0.839}     & {\bf 0.989}  & {\bf 0.908}     \\ \hline
 {\bf Algorithm} & {\bf Precision} & {\bf Recall} & {\bf F-Measure} \\ \hline
 J48             & {\it 0.552}     & {\it 0.432}  & {\it 0.485}     \\
 Random Forest   & {\it 0.556}     & {\it 0.489}  & {\it 0.519}     \\
-Native Bayes    & {\it 0.608}     & {\bf 0.601}  & {\bf 0.604}     \\
+Naive Bayes    & {\it 0.608}     & {\bf 0.601}  & {\bf 0.604}     \\
 SVM             & {\bf 0.735}     & {\it 0.137}  & {\it 0.230}     \\ \hline
 \end{tabular}
 \end{table}
@@ -206,12 +206,12 @@ SVM             & {\bf 0.735}     & {\it 0.137}  & {\it 0.230}     \\ \hline
 {\bf Algorithm} & {\bf Precision} & {\bf Recall} & {\bf F-Measure} \\ \hline
 J48             & {\it 0.822}     & {\it 0.834}  & {\it 0.826}     \\
 Random Forest   & {\it 0.830}      & {\it 0.837}  & {\it 0.833}     \\
-Native Bayes    & {\bf 0.858}     & {\bf 0.858}  & {\bf 0.858}     \\
+Naive Bayes    & {\bf 0.858}     & {\bf 0.858}  & {\bf 0.858}     \\
 SVM             & {\it 0.820}      & {\it 0.835}  & {\it 0.786}     \\ \hline
 \end{tabular}
 \end{table}
 
-From the above tables, we can see that the best results were achieved by using the ``Native Bayes'' Algorithm. For this reason, we will now see some useful information about this result.
+From the above tables, we can see that the best results were achieved by using the ``Naive Bayes'' Algorithm. For this reason, we will now see some useful information about this result.
 
 \begin{table}[H]
 \centering
@@ -219,7 +219,7 @@ From the above tables, we can see that the best results were achieved by using t
 \label{48_table_rer}
 \begin{tabular}{lll}
 \hline
-                                   & {\bf Frequenncy} & {\bf Percentage} \\ \hline
+                                   & {\bf Frequency} & {\bf Percentage} \\ \hline
 Correctly Classified Instances     & {\it 871}        & {\it 85.81\%}    \\
 Incorrectly Classified Instances   & {\it 144}        & {\it 14.19\%}    \\
 Kappa statistic                    & {\it 0.518}      & {\it -}          \\
@@ -250,7 +250,7 @@ In the second scenario, a different Train Set was used. We divided the Train Set
 {\bf Algorithm} & {\bf Precision} & {\bf Recall} & {\bf F-Measure} \\ \hline
 J48             & {\it 0.940}      & {\it 0.810}   & {\it 0.870}      \\
 Random Forest   & {\bf 0.996}     & {\it 0.810}   & {\bf 0.893}     \\
-Native Bayes    & {\it 0.941}     & {\bf 0.828}  & {\it 0.881}     \\
+Naive Bayes    & {\it 0.941}     & {\bf 0.828}  & {\it 0.881}     \\
 SVM             & {\it 0.939}     & {\it 0.819}  & {\it 0.875}     \\ \hline
 \end{tabular}
 \end{table}
@@ -264,7 +264,7 @@ SVM             & {\it 0.939}     & {\it 0.819}  & {\it 0.875}     \\ \hline
 {\bf Algorithm} & {\bf Precision} & {\bf Recall} & {\bf F-Measure} \\ \hline
 J48             & {\it 0.470}      & {\it 0.765}  & {\it 0.582}     \\
 Random Forest   & {\bf 0.533}     & {\bf 0.984}  & {\bf 0.641}     \\
-Native Bayes    & {\it 0.495}     & {\it 0.765}  & {\it 0.601}     \\
+Naive Bayes    & {\it 0.495}     & {\it 0.765}  & {\it 0.601}     \\
 SVM             & {\it 0.479}     & {\it 0.760}   & {\it 0.588}     \\ \hline
 \end{tabular}
 \end{table}
@@ -278,7 +278,7 @@ SVM             & {\it 0.479}     & {\it 0.760}   & {\it 0.588}     \\ \hline
 {\bf Algorithm} & {\bf Precision} & {\bf Recall} & {\bf F-Measure} \\ \hline
 J48             & {\it 0.855}     & {\it 0.802}  & {\it 0.818}     \\
 Random Forest   & {\bf 0.912}     & {\bf 0.841}  & {\bf 0.857}     \\
-Native Bayes    & {\it 0.861}     & {\it 0.817}  & {\it 0.831}     \\
+Naive Bayes    & {\it 0.861}     & {\it 0.817}  & {\it 0.831}     \\
 SVM             & {\it 0.856}     & {\it 0.808}  & {\it 0.823}     \\ \hline
 \end{tabular}
 \end{table}
@@ -291,7 +291,7 @@ From the above tables we can see that the best results were achieved by using th
 \label{412_table_rer}
 \begin{tabular}{ccc}
 \hline
-                                   & {\bf Frequenncy} & {\bf Percentage} \\ \hline
+                                   & {\bf Frequency} & {\bf Percentage} \\ \hline
 Correctly Classified Instances     & {\it 854}        & {\it 84.14\%}    \\
 Incorrectly Classified Instances   & {\it 161}        & {\it 15.86\%}    \\
 Kappa statistic                    & {\it 0.5966}     & {\it -}          \\
@@ -305,7 +305,8 @@ Total Number of Instances          & {\it 1015}       & {\it -}          \\ \hli
 \end{tabular}
 \end{table}
 
-We observe that the method we chose in order to define our train set, succeeded much better results. Still, even if the results are quite satisfying, we are of the opinion that an even better result is possible.
+We observe that the method we chose in order to define our train set, achieved much better results.
+%Still, even if the results are quite satisfying, we are of the opinion that an even better result is possible.
 
 %\section{Overall Opinion Extraction}\label{43_ref}
 %For the third part of this Thesis, an extensive evaluation did not take place because the dataset we processed did not contain sufficient data. More precisely, almost all users' texts express a negative opinion, subsequently there is only a small number of texts that can be characterised as presenting a positive opinion. This fact creates doubts about the quality of the process. To be more precise, the measurements we carried out show that the results are realistic enough, i.e. the majority of the sentences were characterised as ``Negative''. On the other hand, we cannot make an evaluation about the sentences that are characterised as ``Positive''
