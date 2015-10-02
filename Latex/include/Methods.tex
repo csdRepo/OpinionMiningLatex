@@ -22,7 +22,7 @@
 
 
 % CREATED BY DAVID FRISK, 2015
-\chapter{Methods}
+\chapter{Methods}\label{ch_3}
 In this chapter, we will thoroughly analyse the ways with which the three processing stages which were presented in the previous units, were implemented.\\
 \\
 In order to describe in the best possible way the process that was followed, a detailed description of the dataset which was used will be given, as well as of the features that characterise it. Then, we will describe the relational database model which we used to store the information from the texts (dataset). Finally, for each one of the process stages, we will describe the methodology with which each matter was approached.
@@ -93,7 +93,7 @@ In order to store the database, an MySQL\footnote{\url{https://www.mysql.com}} D
 \newpage
 \begin{figure}[H]
 \centering
-\includegraphics[width=1.15\linewidth]{figure/ER.pdf}
+\includegraphics[width=1.05\linewidth]{figure/ER.pdf}
 \caption{Entity - Relation Model}
 \end{figure}
 
@@ -181,7 +181,7 @@ In this Thesis, ``ILSP POS-Tagger\footnote{\url{http://nlp.ilsp.gr/soaplab2-axis
 
 \subsubsection{POS-Tagger Output}\label{3222_ref}
 From the outputs supported by POS-Tagger that we had available, we have chosen the ``xceslemma'' option. With this option beyond POS-Tagging, Lemmatization can also be accomplished. We will need the latter in the next unit that we are going to study. The output given is in XML format. An example can be seen below:\\
-\newpage
+%\newpage
 \lstset{language=XML,
   morekeywords={id,word,lemma,tag}
 }
@@ -210,7 +210,7 @@ From the outputs supported by POS-Tagger that we had available, we have chosen t
 \end{lstlisting}
 %\latintext
 The text that was given as input was \textit{``The output which is given is in XML format''}. We note that for every word of the text, the following information is given:\\
-\\
+
 \begin{itemize}
 	
 	\item \textbf{Id:} an auto increment identifier given in every word of the text
@@ -253,8 +253,8 @@ The last stage for argument retrieval consists of the application of a Machine L
 
 %\newpage
 \subsubsection{Selecting Train and Test Set}\label{3231_ref}
-In this case in point, the train set is stored in the Data Base. More precisely, the train set retrieval from the Database is done with the following query:
-\newpage
+In this case in point, the train set is stored in the Data Base. More precisely, the train set retrieval from the Database is done with the following query:\\
+%\newpage
 \lstset{language=SQL}
 \begin{lstlisting}[frame=single, basicstyle=\small]
 SELECT
@@ -332,7 +332,7 @@ Starting with the aforementioned concept, we noted that the use exclusively of G
 To make the above process clearer: Initially, using the ``ILSP POS-Tagger'' output, we noted the Grammar tags (\ref{3222_ref}), as well as the lemmas of verbs (\ref{3222_ref}) in order to create a list of verbs that are involved in cases where a sentence can be considered  as a suggestion. We can say that we noted the verbs which define the meaning of a sentence, making it a suggestion.\\
 \\
 An example can make the concept that was presented even clearer: Given the sentence \textit{``a change in paragraph 5 of the law  must be made..''} we noted that, in this example, ``must be made'' plays a determining role in order to put across the meaning of the sentence as a suggestion. This particular part of the sentence also has a particular Grammatical form.\\
-%\newpage
+\newpage
 \lstset{language=XML,
   morekeywords={id,word,lemma,tag}
 }
@@ -406,7 +406,7 @@ The last stage for the retrieval of suggestions is the application of a Machine 
 
 \subsubsection{Selecting Train and Test Set}\label{3351_ref}
 In this case the train set is stored in the Database. To be precise, the retrieval of the train set from the Database is done with the following query:\\
-\newpage
+%\newpage
 \lstset{language=SQL}
 \begin{lstlisting}[frame=single, basicstyle=\small]
 SELECT

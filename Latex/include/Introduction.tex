@@ -1,5 +1,5 @@
 % CREATED BY DAVID FRISK, 2015
-\chapter{Introduction}
+\chapter{Introduction}\label{ch_1}
 The goal of this Thesis is the study and creation of a system which will be able to derive and analyse information from citizens' commentaries on Bills which are available for public consultation from the Greek Government via the OpenGov website (\url{http://www.opengov.gr/}). More precisely, an effort is made to analyse information that exists mainly in unstructured writing by which citizens can express their opinion on certain law articles of Bills about which the Greek Government has asked for the opinion of the Greek citizens, as well as their separation in suggestions that contain certain information. Also, we attempt to analyse whether the commentaries express a negative or a positive view on the laws or the Bill.\\
 \\
 Finally, we extract information about whether a sentence supports the writer's opinion, i.e. whether this sentence constitutes a writer's argument as well as whether the writer suggests something else in the text's sentences. Based on the above, it is considered necessary to set apart three main and autonomous techniques which help in the extraction of this information.\\
@@ -98,10 +98,6 @@ In the example (2) the sentence constitutes  ``suggestion''. This is easily dist
 \end{example}
 In the example (4), the sentence that follows the grammatical patterns for suggestions is the first one but, nevertheless, it is not characterised as a ``suggestion''. The next ones, though, are suggestions despite the fact that they do not follow the grammatical patterns for suggestions.
 
-
-
-
-
 \section{Overall Opinion Extraction}
 By the term  ``Overall Opinion Extraction'', we mean the effort to extract information about the way the writer of the comment expressed  his opinion, i.e. whether he is negative or positive towards the topic discussed. This extraction is a difficult task because there are sentences where someone can express a sentiment in an interpretatively controversial way.\\
 \begin{example}
@@ -111,3 +107,21 @@ By the term  ``Overall Opinion Extraction'', we mean the effort to extract infor
 	``The weather was nice until it started raining and unfortunately we didn't go fishing.''\\
 \end{example}
 In the example (5), it is not clear whether the writer wrote that sentence with a negative or neutral sentiment, so any interpretation of the way he wrote it is not clear. In contrast, in the (6) example, it is more apparent that the writer has written the sentence to show his displeasure because of the existence of the word ``unfortunately''.
+
+\section{Contributions}
+\greektext Στο σημέιο αυτό είναι αρκετά σημαντικό να τονίσουμε την συμβολή της εργασίας αυτής στην επιστημονική κοινότητα, καθώς και πιο συγκεκριμένα στο πεδίο του ``Opinion Mining''. Το πρώτο σημαντικό επίτευγμα της εργασίας αυτής είναι ότι καταφεραμε να δημιουργήσουμε ένα σύστημα που κάνει ανάλυση σε τρία διαφορετικά επίπεδα (``Εξαγωγη Επιχειρημαντω'', ``Εξαγωγη Προατσεων'', ``Εξαγωγη γενικης γνωμη συντακτη''). Ειναι η πρωτη φορα που υλοποιειται ενα συστημα που συνενονει αυτες τις τρεις τεχνικες. Ακομη ειναι σημαντικο οτι οι παραπανω τακτικες δουλευουν για την ελληνικλη γλωσσα, διοτι μεχρι στιγμης, πολυ λιγες κινησεις ειχαν γινει προς αυτην την κατευθυνση. Τελος ειναι σημαντικο να τονισουμε οτι τα πρωτα πειραματα που εγιναν με χρηση των μεθοδων δειχνουν οτι ειναι αρκετα ικανοποιητικα και μαλιστα  σε ορισμενες φορες ειναι καλυτερα και απο αλλες εργασιες που εχουν γινει στο παρελθον. Καποια πρωτα αποτελεσματα θα παρουσιασουμε εν συντομια στην επομενη ενοτητα.
+\latintext
+
+\section{Results}
+\greektext Στην ενοτητα αυτη θα παρουσιασουμε εν συντομια μερικα αποτελεσματα απο τα πειραματα που εκτελεσαμε με τις μεθοδους που αναφερθηκαν νωριτερα στο κεφαλαιο αυτο. Ωστοσο πιο αναλυτικα θα παρουσιασουμε αργοτερα στο κεφαλαιο (\ref{ch_4}).\\
+\\
+Αρχικά το πιο σημαντικο αποτελεσμα της εργασιας αυτης ειναι οτι καταφεραμε, με βαση το dataset που ειχαμε διαθεσιμο, να παρουσιασουμε μια τεχνικη για την εξαγωγη των επιχειρηματων με Φ-ΜΕΑΣΘΡΕ περιπου $0.8$. Είναι ένα αποτέλεσμα που ξερπερναει προηγουμενες εργασιες \cite{5}. Πιο αναλυτικα στην ενοτητα \ref{41_ref}).\\
+\\
+Ακόμη είναι σημαντικό διότι καταφεραμε να παρουσιασουμε μια πιο απλουστευμενη μεθοδο για την εξαγωγη των προτασεων που κανουν οι συντακτεςτου κειμενου σε σχεση με αλλες εργασιες που εχουν γινει \cite{9}. Μαλιστα φαινεται πως η μεθοοδς αυτη θα μπορουσε να δουλεψει και σε διαφορετικα datasets, γεγονος που αποτελει ερευνα προς μελλοντικη μελετη. Πιο αναλυτικα τα αποτελεσματα στο κεφαλαιο (\ref{42_ref}).
+\latintext
+
+
+\section{What’s following}
+\greektext
+Αρχικά στο επομενο κεφαλαιο (\ref{ch_2}) θα δουμε καποιες ειαγωγικες εννοιες οι οποιες θα αποτελεσουν τη βση για την μελετη της εργασιας αυτης. Στις επόμενες ενότητες αυτής της εργασίας θα δούμε αναλυτικά τις μεθόδους με τις οποίες εξάγεται η πληροφορία που περιγραφηκε παραπάνω (\ref{ch_3}) καθώς και κάποια αποτελέσματα από την χρήση των μεθόδων αυτών (\ref{ch_4}). Ακόμη στο κεφάλαιο (\ref{ch_5}) παρουσιάζουμε μία δοκιμάστικη εφαρμογή που συνοδέυει την εργασία αυτή και τέλος παραθέτουμε μερικά συμπεράσματα στο κεφάλαιο (\ref{ch_6}).
+\latintext
