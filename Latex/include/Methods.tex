@@ -28,19 +28,19 @@ In this chapter, we will thoroughly analyse the ways with which the three proces
 In order to describe in the best possible way the process that was followed, a detailed description of the dataset which was used will be given, as well as of the features that characterise it. Then, we will describe the relational database model which we used to store the information from the texts (dataset). Finally, for each one of the process stages, we will describe the methodology with which each matter was approached.
 
 \section{Preparing the Dataset}\label{31_ref}
-In this part of the methodology, the features of the used dataset (\ref{311_ref}) will be described in detail. Some information on the way of choosing data (\ref{312_ref}) will be described as well. Next, the way of data mining from the Greek Open Government platform\footnote{\url{http://www.opengov.gr}} (\ref{313_ref}) and finally, the Entity-Relation Model (\ref{314_ref}) of the database which was used to store the data will also be described.
+In this part of the methodology, the features of the used dataset (\ref{311_ref}) will be described in detail. Some information on the way of choosing data (\ref{312_ref}) will be described as well. Next, the way of data mining from the Greek Open Government platform\footnote{\url{http://www.opengov.gr}} (\ref{313_ref}) and finally, the Entity-Relationship Model (\ref{314_ref}) of the database which was used to store the data will also be described.
 
 \subsection{Dataset} \label{311_ref}
-As it has already been mentioned in some points of this Thesis, the data that were used have been taken from the Greek Open Government platform, which constitutes a platform of electronic consultation of citizens on texts, more specifically on laws and decrees that the Greek Government issues. These data are open and accessible to everyone.\\
+As already mentioned, the data that were used have been taken from the Greek Open Government platform, which constitutes a platform of electronic consultation of citizens on texts, more specifically on laws and decrees that the Greek Government issues. These data are open and accessible to everyone.\\
 \\
-In this section, the basic features of the studied texts will be described. The reason why this section comes first in this part of the methodology, is that the very nature of these texts (they are basically users' comments to the online service), created many problems in their analysis.\\
+In this section, the basic features of the studied texts will be described. The reason why this section comes first in this part of the methodology, is that the very nature of these texts (they are basically users' comments to the on-line service), created many problems in their analysis.\\
 \\
 As it has already been mentioned, the texts that were studied feature several oddities, some of which made the process of analysing them difficult.\\
 
 \begin{itemize}
   \item Initially, the first that we can notice is that the length of the texts is 	relatively short. To be precise, it is rare for them to be longer than 3000 characters (approximately 200 words, 80\% of the texts). The length of the text did not affect all the stages of the analysis. The biggest difficulty appeared in the effort to extract the degree of the writer's agreement with the initial text (more details will be given later).\\
   
-  \item A second remark is the fact that the texts that were studied are not consist an official text. By the term ``official'', we want first to declare that the texts are made up of users' comments in an online service and secondly, that they contain many errors (spelling etc). This created many difficulties in the studying of these comments. The first difficulty had to do with the tools needed in order to conduct the overall analysis of each text. The basic idea was that the tools had to be tolerant when it came to errors, at least up to a degree.\\
+  \item A second remark is the fact that the texts that were studied do not constitute an official text. In particular, the texts contain users' comments in an on-line service, and many of them contain spelling, grammatical or other errors that hinder their analysis.. This created many difficulties in the studying of these comments. The first difficulty had to do with the tools needed in order to conduct the overall analysis of each text. The basic idea was that the tools had to be tolerant when it came to errors, at least up to a degree.\\
 \\
 Some very usual errors are:
 
@@ -51,19 +51,18 @@ Some very usual errors are:
   	\item use only of capital letters
   	\item absence of punctuation
   	\item wrong sentence separation (there was no gap after the dot)
-  	\item other types of errors\\
 	\end{enumerate}
 
-  \item One more issue is  that there are many times when syntactical structure errors are 	spotted. This problem is directly connected to the use of POS-Tagger for the syntactic analysis (parsing) of texts. This issue affects, to some degree, the extrapolation of arguments and of proposals and counter proposals that the user makes.\\
+  \item As it was mentioned the commentaries do not constitute an official text, so there are many times when syntactical structure errors are spotted. This problem is directly connected to the use of POS-Tagger for the syntactic analysis (parsing) of texts. This issue affects, to some degree, the extrapolation of arguments and of proposals and counter proposals that the user makes.\\
   
   \item Another feature is that the texts are entirely in Greek. This problem is more 	serious, because there are no tools which we needed at some point of the analysis, that support the Greek Language. Subsequently, as we will see later on, there was the need to resort to some compromising solutions.\\
   
-  \item One last issue that is worth mentioning, which constitutes a more qualitative feature, at least in the whole of texts that were studied, is the fact that the majority of users who wrote a comment are ``annoyed''. This ``annoyance'' stems from the fact that the texts that are under discussion contain laws and presidential decrees that, essentially, lead to a decrease in public spending towards the citizens. This ``annoyance'' is noted almost in the entire dataset that we studied. The problem is that the texts in which the writers agree with the initial text are limited. As a result, this issue complicates the process of detecting, if the writer agrees with the initial text. Also another serious problem is that the ``annoyance'' causes the users to make several kind of mistakes (such as grammatical, syntactical etc.).
+  \item One last issue that is worth mentioning, which constitutes a more qualitative feature, at least in the whole of texts that were studied, is the fact that the majority of users who wrote a comment are ``annoyed''. This ``annoyance'' stems from the fact that the texts that are under discussion contain laws and presidential decrees most of which, lead to a decrease in public spending towards the citizens. This ``annoyance'' is noted almost in the entire dataset that we studied. The problem is that the texts in which the writers agree with the initial text are limited. As a result, this issue complicates the process of detecting, if the writer agrees with the initial text. Also another serious problem is that the ``annoyance'' causes the users to make several kind of mistakes (such as grammatical, syntactical etc.).
 \end{itemize}
 
 
 \subsection{Choosing the Set of Documents}\label{312_ref}
-To continue the process, we randomly chose five different bills that contained a significant amount of users' replies. Afterwards, we selected a few, trying to eliminate the replies that we did not want to process. For example:\\
+To continue the process, we manually chose five different bills that contained a significant amount of users' replies. Afterwards, we selected a few, trying to eliminate the replies that we did not want to process. For example:\\
 
 \begin{itemize}
 
@@ -89,7 +88,7 @@ The last step for the creation of the final dataset was the data mining from the
 These data were later stored in the database which was created for the storage of data that were collected in all the stages of processing.
 
 \subsection{Database}\label{314_ref}
-In order to store the database, an MySQL\footnote{\url{https://www.mysql.com}} Database was created, whose Entity-Relation Model\footnote{\url{https://en.wikipedia.org/wiki/Entity\%E2\%80\%93relationship_model}} can be presented in the following layout.
+In order to store the final database with the selected bills and comments, an MySQL\footnote{\url{https://www.mysql.com}} Database was created, whose Entity-Relation Model\footnote{\url{https://en.wikipedia.org/wiki/Entity\%E2\%80\%93relationship_model}} can be presented in the following layout.
 \newpage
 \begin{figure}[H]
 \centering
@@ -101,11 +100,11 @@ In the above layout, we can see the Entity-Relation Model that was used for stor
 
 \begin{itemize}
 
-	\item \textbf{opngv\textunderscore comment:} It is used to store texts which have been extracted from the public consultation web page and more precisely,each user's texts is stored in the variable of the ``comment'' table. The rest of the elements of this text are used to store some meta data of the texts (e.g. law name/number, name of the author, date).
+	\item \textbf{opngv\textunderscore comment:} It is used to store texts which have been extracted from the public consultation web page and more precisely, each commentary is stored in the raw called ''comment'' of the ``opengov\_ comment'' table. The rest of the elements of this text are used to store some meta data of the texts (e.g. law name/number, name of the author, date).
 	\item \textbf{opngv\textunderscore sentiment:} This table is used to store the information that is extracted after the completion of the process. More precisely, in the ``Sentiment'' field, the information that is stored defines whether a user's text/comment is negative or positive,
-	\item \textbf{opngv\textunderscore sentence:} This table is used to store sentences that make up the text. In the ``sentence'' field, each sentence is stored. The separation of the text is done by using POS-Tagger.
+	\item \textbf{opngv\textunderscore sentence:} This table is used to store sentences that make up the text. In the ``sentence'' field, each sentence of the commentary is stored. The word "sentence" used with the literal significance so the separation of the text is done by using POS-Tagger.
 	\item \textbf{opngv\textunderscore argument:} It contains the values of the argument markers for each sentence. Each variable of this table is explained in unit (\ref{321_ref}).
-	\item \textbf{opngv\textunderscore suggestions:} Respectively with the ``opngvargument'' field, this field contains the suggestion markers.
+	\item \textbf{opngv\textunderscore suggestions:} Respectively with the ``opngv\_ argument'' field, this field contains the suggestion markers.
 	\item \textbf{opngv\textunderscore trainset:} This table contains data which declare whether a sentence is an Argument or a Suggestion. These data are stored in the boolean variables of the table (argument, suggestion). The data of this table make up the train set that is used for machine learning. More precisely, the train set comes up by combining the ``opngv\textunderscore argument'' and the ``opngv\textunderscore suggestion'' tables with this table.\\
 
 \end{itemize}
@@ -138,7 +137,7 @@ Each one of the three stages will be explained right away.
 \subsection{Selecting Argument Markers}\label{321_ref}
 This step, in essence, constitutes the selection process of certain ``criteria'' - ``Argument Markers'' that will help us define what an argument is. Essentially, this process constituted the hardest part in the whole Argument Extraction stage.\\
 \\
-For this step, we decided to use Machine Learning techniques, an approach that is popular in the related literature (\ref{321_ref}].In particular, our approach consists in defining some parameters which will define will define with a relative clarity whether a sentence is an argument or not.\\
+For this step, we decided to use Machine Learning techniques, an approach that is popular in the related literature (\ref{321_ref}].In particular, our approach consists in defining some parameters which will define with a relative clarity whether a sentence is an argument or not.\\
 \\
 But before we get in the process of searching for these variables, we had one more difficulty to face. Even though it sounds relatively easy to recognise the arguments in a text, in reality it was a rather difficult process. In experiments with human users, it turned out that there was great difficulty, even among humans, to agree on whether a sentence contains an argument or not. To address this problem, we formulated the following definition:\\
 \\
@@ -321,7 +320,7 @@ Each one of the above steps will be explained in detail, in the next sections.
 \subsection{Selecting Suggestion Markers}\label{331_ref}
 As in the previous chapter we have, at this stage, to set some suggestion markers i.e., some characteristics in each sentence, which, if they appear, then the sentence that is being studied probably contains a suggestion.\\
 \\
-The basic idea that we applied is based, to a great extent, on Greek Grammar. We found that a suggestion can be ``modelled'' better than an argument. The basic concept is that in order to make a suggestion, a writer is ``obliged'' to follow some Grammar rules.\\
+The basic idea that we applied is based, to a great extent, on Greek Grammar. We found that a suggestion can be ``modelled'' better than an argument. The basic concept is that in order to make a suggestion, a writer is ``obliged'' to follow some grammatical rules.\\
 \\
 We know that according to Greek Grammar, in order to express incitement in a sentence, the writer should use mainly either the Imperative or the Subjunctive Grammatical mood. These two Grammatical moods are often linked to the meaning we want to detect in our texts.\\
 \\
@@ -398,7 +397,7 @@ One more point that we need to stress is that we divided the suggestion markers 
 \\
 Finally, having made the above comparisons, only the highest score will be kept, as well as the category from which this score came up. We should also note that the sentences that contain ``Qst'' automatically get zero score because we wanted to exclude the interrogative sentences for the same reasons that were mentioned earlier.
 
-\subsection{Adding additional features for the optimization of Machine Learning Processs}\label{334_ref}
+\subsection{Additional features for the optimization of Machine Learning Processs}\label{334_ref}
 In order to achieve better results in each sentence that resulted from the above process, we counted the number of words from which it is made up.
 
 \subsection{Apply Machine Learning}\label{335_ref}

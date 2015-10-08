@@ -1,13 +1,13 @@
 % CREATED BY DAVID FRISK, 2015
 \chapter{Introduction}\label{ch_1}
-The goal of this Thesis is the study and creation of a system which will be able to derive and analyse information from citizens' commentaries on Bills which are available for public consultation from the Greek Government via the OpenGov website (\url{http://www.opengov.gr/}). More precisely, an effort is made to analyse information that exists mainly in unstructured writing by which citizens can express their opinion on certain law articles of Bills about which the Greek Government has asked for the opinion of the Greek citizens, as well as their separation in suggestions that contain certain information. Also, we attempt to analyse whether the commentaries express a negative or a positive view on the laws or the Bill.\\
+The goal of this Thesis is the study and creation of a system which will be able to derive and analyse information from citizens' commentaries on Bills which are available for public consultation from the Greek Government via the OpenGov website (\url{http://www.opengov.gr/}). More precisely, an effort is made to analyse information that exists mainly in unstructured writing by which citizens can express their opinion on certain law articles of Bills about which the Greek Government has asked for the opinion of the Greek citizens, as well as their separation in suggestions that contain certain information. Also, we attempt to analyse whether the commentaries express a negative or a positive view on the bill.\\
 \\
 Finally, we extract information about whether a sentence supports the writer's opinion, i.e. whether this sentence constitutes a writer's argument as well as whether the writer suggests something else in the text's sentences. Based on the above, it is considered necessary to set apart three main and autonomous techniques which help in the extraction of this information.\\
 
 \begin{itemize}
 
-	\item The first one is ``Argument Extraction'', which aims at finding the sentences with which the writer argues for or against a law.
-	\item The second is the ``Extraction of  Suggestions and Counter-Suggestions'', which aims at finding the sentences in the text by which the writer makes a suggestion or a counter suggestion.
+	\item The first one is ``Argument Extraction'', which aims at finding the sentences with which the writer argues for or against a bill.
+	\item The second is the ``Extraction of  Suggestions and Counter-Suggestions'', which aims at finding the sentences in the text by which the writer makes a suggestion related to improvements in the bill.
 	\item The last one is ``General Opinion Extraction'', i.e. finding out whether the commentator of the law is positive or negative towards it.
 
 \end{itemize}
@@ -40,7 +40,7 @@ First, we have to note that the texts we study are users' answers in the Greek G
 Our system has the following abilities:\\
 \begin{itemize}
 
-	\item Automatic extraction of proposals and counter proposal that users make in a text.
+	\item Automatic extraction of proposals and counter proposals that users make in a text.
 	\item Extraction of the argumentation that the writers compose.
 	\item Extraction of the general agreement/disagreement of the writer, imprinted in one word, ``Positive'' or ``Negative''.\\
 
@@ -50,7 +50,7 @@ The above functions, in essence, could help many practical applications, not onl
 
 \begin{itemize}
 
-	\item \textbf{Search Engines:} So far, many search engines which have the ability to retrieve information that the user is looking for, exist. This search sometimes is done by using methods and algorithms from the field of Information Retrieval (TF-IDF, PageRank etc.) and some cases by using a Query Language if we refer to Link Open Data. In both cases, the way information is retrieved cannot offer more qualitative characteristics, especially if we think about the subject of argumentation. Therefore, let's imagine the abilities that a search engine, which could retrieve information and combine them with key words, would  provide us with. In order to make it clearer, we are going to give some examples in query form. \textit{``Find the arguments that are in favour of buying X car''}. \textit{``Find the arguments that contradict the arguments that are in favour of buying X car''}. \textit{``Find all the arguments that are against Bill Y''}, \textit{``Find everyone who is against Bill Z''} etc. \cite{1}
+	\item \textbf{Search Engines:} So far, many search engines which have the ability to retrieve information that the user is looking for, exist. This search sometimes is done by using methods and algorithms from the field of Information Retrieval (TF-IDF, PageRank etc.) and some cases by using a Query Language if we refer to Linked Open Data. In both cases, the way information is retrieved cannot offer more qualitative characteristics, especially if we think about the subject of argumentation. Therefore, let's imagine the abilities that a search engine, which could retrieve information and combine them with key words, would  provide us with. In order to make it clearer, we are going to give some examples in query form. \textit{``Find the arguments that are in favour of buying X car''}. \textit{``Find the arguments that contradict the arguments that are in favour of buying X car''}. \textit{``Find all the arguments that are against Bill Y''}, \textit{``Find everyone who is against Bill Z''} etc. \cite{1}
 	\item \textbf{Journalism:} The creation of a system which could extract all the above information, would help this field a lot. A journalist could study the argumentation of politicians and draw conclusions about the opinions someone has expressed  in a specific amount of time. Of course, we could look for arguments and counterarguments on a matter and also we could check if certain individuals change their stance on a matter as time goes by. We can think of many other scenarios/possible applications.
 	\item \textbf{Politics/Administration:} This tool could frame an online consultation service, especially in administration and decision making with the citizens' participation. Some of the functions that the system we develop offers could help in that direction. For example, we could retrieve all the counter proposals/disagreements.\\
 
@@ -109,7 +109,7 @@ By the term  ``Overall Opinion Extraction'', we mean the effort to extract infor
 In the example (5), it is not clear whether the writer wrote that sentence with a negative or neutral sentiment, so any interpretation of the way he wrote it is not clear. In contrast, in the (6) example, it is more apparent that the writer has written the sentence to show his displeasure because of the existence of the word ``unfortunately''.
 
 \section{Contributions}
-It is important to mention the contributions of this thesis on the ``Opinion Mining'' research area. A very important achievement of this Thesis is the creation of a system that is able to analyse in three different layers namely: ``Argument Extraction'', ``Suggestion Extraction'' and ``Overall Opinion Extraction''. It is the first implementation of a system that unifies and uses the three aforementioned techniques, and most importantly achieves the localisation in Greek language where there was very limited material of related work with this language. Lastly, we have to emphasize on the results of experiments which are very satisfying and in some cases yield better result on comparison with benchmarks from other related work. We will present the main points of our experimental results in the following section.
+It is important to mention the contributions of this thesis on the ``Opinion Mining'' research area. A very important achievement of this Thesis is the creation of a system that is able to analyse in three different layers namely: ``Argument Extraction'', ``Suggestion Extraction'' and ``Overall Opinion Extraction''. It is the first implementation of a system that unifies and uses the three aforementioned techniques, and most importantly achieves the localisation in Greek language where there was very limited material of related. Lastly, we have to emphasize on the results of experiments which are very satisfying and in some cases yield better result, compared with experiments from other related work. We will present the main points of our experimental results in the following section.
 
 \section{Results}
 In this chapter we will shortly present output experimental output results, with the aforementioned methods. We will visit results in more detail in chapter (\ref{ch_4}).\\
