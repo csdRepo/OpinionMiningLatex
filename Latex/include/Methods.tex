@@ -137,7 +137,7 @@ Each one of the three stages will be explained right away.
 \subsection{Selecting Argument Markers}\label{321_ref}
 This step, in essence, constitutes the selection process of certain ``criteria'' - ``Argument Markers'' that will help us define what an argument is. Essentially, this process constituted the hardest part in the whole Argument Extraction stage.\\
 \\
-For this step, we decided to use Machine Learning techniques, an approach that is popular in the related literature (\ref{321_ref}].In particular, our approach consists in defining some parameters which will define with a relative clarity whether a sentence is an argument or not.\\
+For this step, we decided to use Machine Learning techniques, an approach that is popular in the related literature (\ref{321_ref}). In particular, our approach consists in defining some parameters which will define with a relative clarity whether a sentence is an argument or not.\\
 \\
 But before we get in the process of searching for these variables, we had one more difficulty to face. Even though it sounds relatively easy to recognise the arguments in a text, in reality it was a rather difficult process. In experiments with human users, it turned out that there was great difficulty, even among humans, to agree on whether a sentence contains an argument or not. To address this problem, we formulated the following definition:\\
 \\
@@ -149,7 +149,7 @@ But before we get in the process of searching for these variables, we had one mo
 	
 \end{itemize}
 
-If there is any of the above markers in a sentence, then this sentence can be characterised as an argument (Argumentative sentence). Even with the above two conventions, in some cases it is still difficult to determine whether a sentence is an argument. More precisely, another convention has been set, with which we made an effort to exclude the sentences that are interrogative. The reason is that usually, interrogative sentences are likely to express sarcasm. In our dataset this was actually very usual.\\
+If there is any of the above markers in a sentence, then this sentence can be characterised as an argument (Argumentative sentence). Even with the above two conventions, in some cases it is still difficult to determine whether a sentence is an argument. More precisely, another convention has been set, with which we made an effort to define that the interrogative sentences are not congaing any arguments. The reason is that usually, interrogative sentences are likely to express sarcasm. In our dataset this was actually very usual.\\
 \\
 Having set the above conventions, we studied a total of Argumentative Sentences, in order to be able to track down ``Argument Markers''. In essence, we looked for parts of speech (for example the number of verbs, number of adjectives and more), as well as other variables that often appear in this type of sentences. These variables were to be used in the next steps and especially in the step where the ``Machine Learning'' process is applied\\
 \\
